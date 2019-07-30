@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route, Link, Switch} from 'react-router-dom';
-import Index from './components/index/Index'
+import Index from './components/index/Index';
 
 // import Signup from './components/signup/Signup.js';
 // import Login from './components/login/Login.js';
