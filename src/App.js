@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import {Route, Link, Switch} from 'react-router-dom';
 import Index from './components/index/Index';
+import Asana from './components/asana/Asana.js';
+import Signup from './components/signup/Signup.js';
+import Login from './components/login/Login.js';
 
-// import Signup from './components/signup/Signup.js';
-// import Login from './components/login/Login.js';
-
-import AuthService from './services/AuthService.js';
+import AuthService from './services/AuthServices.js';
 
 import Nav from './components/nav/Nav.js';
 
@@ -42,6 +42,7 @@ class App extends React.Component {
     this.service.currentUser()
     .then((theUser)=>{
       this.setState({currentlyLoggedIn: theUser})
+      console.log(this.state.currentlyLoggedIn)
     })
     .catch(()=>{
       this.setState({currentlyLoggedIn: null})
@@ -63,7 +64,7 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    this.asanas();
+    this.getAllAsanas();
     this.getCurrentlyLoggedInUser();
   }
 
