@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Asana from '../asana/Asana';
 
+
 class Index extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,7 @@ class Index extends Component {
   render() {
     return (
       <div>
+        
         <Asana ready={this.state.ready} asanaList={this.state.allAsanas}/>
       </div>
     );
