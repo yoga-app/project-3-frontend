@@ -9,7 +9,7 @@ class AboutUs extends Component {
         <div className="about-your-guruji">
 
         </div>
-        <MapContainer />
+        <MapContainer width={'70%'} height={'70%'}/>
       </div>
     );
   }
