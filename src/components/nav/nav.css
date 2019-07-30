@@ -1,0 +1,9 @@
+.nav-link {
+  text-decoration: none;
+  line-height: 90px;
+}
+
+.nav-button {
+  background-color: #00000000;
+  border: none;
+}
