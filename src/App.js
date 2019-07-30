@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route, Link, Switch} from 'react-router-dom';
-import Index from './components/index/Index';
+import Main from './components/main/Main';
 import Asana from './components/asana/Asana.js';
 import Signup from './components/signup/Signup.js';
 import Login from './components/login/Login.js';
@@ -12,6 +12,7 @@ import Nav from './components/nav/Nav.js';
 
 
 import axios from 'axios';
+import AboutUs from './components/about-us/AboutUs';
 
 class App extends React.Component {
   constructor(props){
@@ -30,6 +31,7 @@ class App extends React.Component {
   getAllAsanas = () => {
     axios.get(`http://localhost:5000/asanas`, {withCredentials: true})
     .then(response => {
+      console.log(response)
       this.setState({
         asanas: response.data,
         ready: true,
@@ -73,7 +75,7 @@ class App extends React.Component {
   // console.log('---------------',this.state);
 
     return (
-      <div>
+      <div className="app">
 
         <Nav
           theUser = {this.state.currentlyLoggedIn} 
@@ -96,16 +98,15 @@ class App extends React.Component {
           />
         }
 
-        {/* <Switch> */}
+        <Switch>
           {/* just to test:  */}
 
           <Route exact path="/asanas" render ={(props)=>
             <Asana
               {...props} 
               theUser = {this.state.currentlyLoggedIn} 
-              getData = {this.asanas}
+              getData = {this.state.asanas}
               ready = {this.state.ready}
-              theUser = {this.state.currentlyLoggedIn}
             />}
           />
 
@@ -113,14 +114,17 @@ class App extends React.Component {
             <ProjectDetails
               {...props} 
               ready = {this.state.ready}
-              getData = {this.asanas}
+              getData = {this.state.asanas}
               theUser = {this.state.currentlyLoggedIn}
             />}
           /> */}
 
           {/* end test -------------------------------- */}
-        {/* </Switch> */}
-        <Index />
+
+          <Route exact path="/aboutus" component={AboutUs}/>
+
+        </Switch>
+        <Main />
       </div>
     );
   }

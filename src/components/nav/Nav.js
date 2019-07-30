@@ -26,23 +26,30 @@ function Nav(props){
     // newsletter feed
 
     <nav>
-      {props.theUser && 
-        <Link to="/asanas" className="nav-link">{props.theUser.firstName} {props.theUser.lastName}</Link>
-      }
+      <div className="logo">
+        <p>temp-logo</p>
+      </div>
+      <div className="nav-links">
+        <Link to="/aboutus" className="nav-link">home</Link>
 
-      {!props.theUser && 
-        <span>
-          <button className="nav-button" onClick = {()=> props.toggleForm('login')}>login</button>
-          <button className="nav-button" onClick = {()=> props.toggleForm('signup')}>sign up</button>
-        </span>
-      }
+        {!props.theUser && 
+          <span>
+            <button className="nav-button" onClick = {()=> props.toggleForm('login')}>login</button>
+            <button className="nav-button" onClick = {()=> props.toggleForm('signup')}>sign up</button>
+          </span>
+        }
 
-      {props.theUser && 
-        <span>
-          <button className="nav-button" onClick = {doLogoutNowPlease}>logout</button>
-        </span>
-      }
-
+        <Link to="/aboutus" className="nav-link">about us</Link>
+        {props.theUser && 
+          <Link to="/asanas" className="nav-link">{props.theUser.username}</Link>
+          // <Link to="/asanas" className="nav-link">{props.theUser.firstName} {props.theUser.lastName}</Link>
+        }
+        {props.theUser && 
+          <span>
+            <button className="nav-button" onClick = {doLogoutNowPlease}>logout</button>
+          </span>
+        }
+      </div>
     </nav>
   )
 

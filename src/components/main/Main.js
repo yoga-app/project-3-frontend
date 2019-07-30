@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Asana from '../asana/Asana';
 
-class Index extends Component {
+class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,4 +31,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Main;

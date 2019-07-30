@@ -4,6 +4,7 @@ import './asana.css';
 class Asana extends Component {
 
   showAsanas() {
+    console.log(this.props)
     return this.props.asanaList.map(eachA=> {
       return (
         <div key={eachA.id}>
