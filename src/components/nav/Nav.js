@@ -30,7 +30,7 @@ function Nav(props){
         <p>temp-logo</p>
       </div>
       <div className="nav-links">
-        <Link to="/aboutus" className="nav-link">home</Link>
+        <Link to="/" className="nav-link">home</Link>
 
         {!props.theUser && 
           <span>

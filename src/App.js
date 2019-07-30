@@ -122,9 +122,10 @@ class App extends React.Component {
           {/* end test -------------------------------- */}
 
           <Route exact path="/aboutus" component={AboutUs}/>
+          <Route exact path="/" component={Main}/>
 
         </Switch>
-        <Main />
+        {/* <Main /> */}
       </div>
     );
   }
