@@ -6,7 +6,9 @@ class AboutUs extends Component {
   render() {
     return (
       <div className="about-us">
-        <p>test about us</p>
+        <div className="about-your-guruji">
+
+        </div>
         <MapContainer />
       </div>
     );
