@@ -7,7 +7,7 @@ class AboutUs extends Component {
     return (
       <div className="about-us">
         <p>test about us</p>
-        <MapContainer />
+        <MapContainer width={'70%'} height={'70%'}/>
       </div>
     );
   }

@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { InfoWindow, Marker } from 'google-maps-react';
 
-const mapStyles = {
-  width: '100%',
-  height: '100%'
-};
 
 export class MapContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showingInfoWindow: false,  //Hides or the shows the infoWindow
+      activeMarker: {},          //Shows the active marker upon click
+      selectedPlace: {},         //Shows the infoWindow to the selected place upon a marker
+      
+    };
+    
+  }
+  
+
   render() {
-    return (
-      <Map
+
+      return (
+        <Map
         google={this.props.google}
         zoom={10}
-        style={mapStyles}
+        style={{width: this.props.width, height: this.props.height}}
         initialCenter={{
-         lat: 34.852619,
-         lng: -82.394012
+          lat: 34.852619,
+          lng: -82.394012
         }}
-      />
-    );
+        />
+        );
+     
   }
 }
 
