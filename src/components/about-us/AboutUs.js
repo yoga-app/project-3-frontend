@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './about-us.css';
 import MapContainer from '../googleMap/MapContainer.js'
+import ProfileTop from '../profile-top/ProfileTop';
 
 class AboutUs extends Component {
   render() {
     return (
       <div className="about-us">
+        <div><ProfileTop /></div>
         <div className="about-your-guruji">
           <h2>--about your teacher text--</h2>
           <p>Liquorice fruitcake cake sugar plum fruitcake. Gingerbread cake cheesecake. Powder carrot cake oat cake sweet roll biscuit cheesecake. Ice cream candy canes tiramisu sweet marshmallow. Toffee cookie soufflé icing pastry muffin chupa chups. Brownie pudding jujubes topping soufflé lemon drops tootsie roll. Tootsie roll fruitcake chupa chups jelly beans gummies gingerbread dragée. Lemon drops cotton candy halvah liquorice halvah biscuit. <br/><br/>Cheesecake jelly caramels jujubes. Powder topping fruitcake sweet roll cotton candy icing dessert sugar plum. Cake apple pie gummies macaroon croissant danish. Macaroon biscuit sesame snaps bear claw. Tiramisu sweet tart chocolate cake lemon drops. Ice cream tootsie roll marzipan cookie lollipop marshmallow tart pudding. Candy chupa chups dessert sugar plum marshmallow candy apple pie jujubes. Liquorice halvah danish carrot cake macaroon powder chupa chups.</p>
@@ -21,8 +23,9 @@ class AboutUs extends Component {
         <div className="map-wrap">
           <h2>Where to find us</h2>
           <div className="contact-info">
-            <p>(123) 456-7890</p>
-            <p>123, Main street, This City</p>
+            <p>(800) GALLETA</p>
+            <p>Chris Chiropractic Services</p>
+            <p>100, E Lee Road, Suite D, Taylors, SC 29687</p>
           </div>
           <MapContainer width={'650px'} height={'450px'}/>
         </div>
