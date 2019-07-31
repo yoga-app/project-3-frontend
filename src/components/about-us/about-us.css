@@ -1,6 +1,9 @@
 .about-us {
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 251, 247);
+  padding: 50px 100px;
+  height: 1100px;
 }
 
 .about-us2 {
@@ -9,4 +12,8 @@
 
 .live-your-happiness {
   font-size: 2rem;
+}
+
+.map-wrap > * > * {
+  width: 650px !important;
 }
