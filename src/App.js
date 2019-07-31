@@ -5,6 +5,7 @@ import Main from './components/main/Main';
 import Asana from './components/asana/Asana.js';
 import Signup from './components/signup/Signup.js';
 import Login from './components/login/Login.js';
+import Profile from './components/profile/Profile.js';
 
 import AuthService from './services/AuthServices.js';
 
@@ -110,6 +111,13 @@ class App extends React.Component {
               theUser = {this.state.currentlyLoggedIn} 
               getData = {this.state.asanas}
               ready = {this.state.ready}
+            />}
+          />
+
+          <Route exact path="/profile" render ={(props)=>
+            <Profile
+              {...props} 
+              theUser = {this.state.currentlyLoggedIn}
             />}
           />
 
