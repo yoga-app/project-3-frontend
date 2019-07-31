@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../../services/AuthServices.js';
+import Button from '../button/Button.js'
 
 class Login extends Component {
   constructor(props){
@@ -30,9 +31,6 @@ class Login extends Component {
   render(){
     return(
       <form onSubmit = {this.tryToLogin}>
-
-          <h3>Login</h3>
-
           <legend>Username</legend>
           <input value={this.state.usernameInput}
             name="usernameInput"
@@ -47,7 +45,7 @@ class Login extends Component {
 
 
 
-        <button>Submit</button>
+        <Button text="LOGIN" class="login-signup"/>
 
       </form>
     )

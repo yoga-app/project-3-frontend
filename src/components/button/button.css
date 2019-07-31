@@ -1,4 +1,4 @@
-.button {
+.login-signup {
   line-height: 2.4rem;
   height: 2.6rem;
   background-color: #413B3D;
@@ -11,7 +11,7 @@
   color: white;
 }
 
-.button:hover {
+.login-signup:hover {
   cursor: pointer;
   color: #413B3D;
   background-color: #00000000;
