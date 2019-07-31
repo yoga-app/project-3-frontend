@@ -54,13 +54,16 @@ class App extends React.Component {
 
   toggleForm = (thisForm) =>{
     let theForm;
+    let theOther;
     if(thisForm === "signup"){
       theForm = 'signupShowing'
+      theOther = 'loginShowing'
     } else {
       theForm = 'loginShowing'
+      theOther = 'signupShowing'
     }
-
-    this.setState({[theForm]: !this.state[theForm]})
+    this.setState({[theForm]: !this.state[theForm], [theOther]: false })
+    
   }
 
 
