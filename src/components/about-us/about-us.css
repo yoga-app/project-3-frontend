@@ -3,11 +3,20 @@
   flex-direction: column;
   background-color: rgb(255, 251, 247);
   padding: 50px 100px;
-  height: 1100px;
 }
 
-.about-us2 {
+.about-us > * {
   width: 750px;
+  margin-bottom: 50px;
+}
+
+.about-us > :nth-child(odd) {
+  text-align: right;
+  align-self: flex-end;
+}
+
+.about-us > :nth-child(even) {
+  text-align: left;
 }
 
 .live-your-happiness {
@@ -16,4 +25,5 @@
 
 .map-wrap > * > * {
   width: 650px !important;
+  height: 450px !important;
 }
