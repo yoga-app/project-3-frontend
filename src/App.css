@@ -1,6 +1,22 @@
+.color-pallete {
+  /* accent: */
+  color: #6BD5D3;
+  color: #413B3D;
+  /* main: */
+  color: #DF917D;
+  color: #F1CBAA;
+  color: #FDF4F3;
+}
+
 .app {
   margin: 0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 100;
   font-size: 1.3rem;
+  color: #413B3D;
+  background-color: #FDF4F3;
+}
+
+a:hover, button:hover {
+  color: rgb(86, 172, 170);
 }

@@ -1,7 +1,6 @@
 .nav-link {
   text-decoration: none;
   line-height: 90px;
-  color: black;
 }
 
 .nav-button {
@@ -13,13 +12,21 @@
   cursor: pointer;
 }
 
-.nav-link:hover, .nav-button:hover {
-  text-decoration: tomato;
+
+.color-pallete {
+  /* accent: */
+  color: #6BD5D3;
+  color: #413B3D;
+  /* main: */
+  color: #DF917D;
+  color: #F1CBAA;
+  color: #FDF4F3;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
+  background-image: linear-gradient(#F1CBAA 50%, #FDF4F3 50%);
 }
 
 .nav-links {

@@ -1,7 +1,6 @@
 .about-us {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 251, 247);
   padding: 50px 100px;
 }
 
@@ -11,12 +10,16 @@
 }
 
 .about-us > :nth-child(odd) {
+  border-right: 4px solid #DF917D;
+  padding-right: 30px;
   text-align: right;
   align-self: flex-end;
 }
 
 .about-us > :nth-child(even) {
   text-align: left;
+  border-left: 4px solid #DF917D;
+  padding-left: 30px;
 }
 
 .live-your-happiness {
@@ -26,4 +29,15 @@
 .map-wrap > * > * {
   width: 650px !important;
   height: 450px !important;
+}
+
+
+.color-pallete {
+  /* accent: */
+  color: #6BD5D3;
+  color: #413B3D;
+  /* main: */
+  color: #DF917D;
+  color: #F1CBAA;
+  color: #FDF4F3;
 }
