@@ -5,13 +5,12 @@ import Main from './components/main/Main';
 import Asana from './components/asana/Asana.js';
 import Signup from './components/signup/Signup.js';
 import Login from './components/login/Login.js';
+
 import Profile from './components/profile/Profile.js';
 
 import AuthService from './services/AuthServices.js';
-
 import Nav from './components/nav/Nav.js';
-
-
+import Footer from './components/footer/Footer';
 import axios from 'axios';
 import AboutUs from './components/about-us/AboutUs';
 
@@ -137,6 +136,7 @@ class App extends React.Component {
 
         </Switch>
         {/* <Main /> */}
+        <Footer />
       </div>
     );
   }
