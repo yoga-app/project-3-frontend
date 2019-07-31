@@ -5,20 +5,22 @@
 }
 
 .about-us > * {
-  width: 750px;
+  width: 900px;
   margin-bottom: 50px;
 }
 
 .about-us > :nth-child(odd) {
-  border-right: 4px solid #DF917D;
+  border-right: 10px solid rgba(223, 145, 125, 0.473);
+  border-radius: 10px;
   padding-right: 30px;
   text-align: right;
   align-self: flex-end;
 }
 
 .about-us > :nth-child(even) {
+  border-left: 10px solid rgba(223, 145, 125, 0.473);
+  border-radius: 10px;
   text-align: left;
-  border-left: 4px solid #DF917D;
   padding-left: 30px;
 }
 
@@ -26,11 +28,26 @@
   font-size: 2rem;
 }
 
-.map-wrap > * > * {
+.map-wrap > *:nth-child(3) > * {
   width: 650px !important;
   height: 450px !important;
 }
 
+.contact-info {
+  margin-bottom: 1rem;
+}
+
+.contact-info > p {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.about-us h2 {
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin: 0 0 1.5rem 0;
+}
 
 .color-pallete {
   /* accent: */
