@@ -10,7 +10,7 @@ class AuthService {
   }
 
   signup = (username, password) => {
-    return this.service.post('/signup', {username:username, password:password})
+    return this.service.post('/signup', {username:username, password:password}) //keys as in tello list
     .then(response => response.data)
   }
 

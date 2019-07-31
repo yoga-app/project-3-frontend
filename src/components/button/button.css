@@ -1,0 +1,19 @@
+.button {
+  line-height: 2.4rem;
+  height: 2.6rem;
+  background-color: #413B3D;
+  border: 2px solid #413B3D;
+  border-radius: 5px;
+  padding: 0 1rem;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #413B3D;
+  background-color: #00000000;
+  border: 2px solid #413B3D;
+}
