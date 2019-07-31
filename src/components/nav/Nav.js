@@ -27,7 +27,8 @@ function Nav(props){
 
     <nav>
       <div className="logo">
-        <p>temp-logo</p>
+        <img className="kukee-img" src="/images/logo.svg" />
+        <p className="kukee">Kukee Bliss Yoga</p>
       </div>
       <div className="nav-links">
         <Link to="/" className="nav-link">home</Link>
@@ -40,15 +41,22 @@ function Nav(props){
         }
 
         <Link to="/aboutus" className="nav-link">about us</Link>
-        {props.theUser && 
-          <Link to="/asanas" className="nav-link">{props.theUser.username}</Link>
-          // <Link to="/asanas" className="nav-link">{props.theUser.firstName} {props.theUser.lastName}</Link>
-        }
+
         {props.theUser && 
           <span>
             <button className="nav-button" onClick = {doLogoutNowPlease}>logout</button>
           </span>
         }
+
+        {props.theUser && 
+          <Link to="/profile" className="nav-link profile">
+            <img className="profile-pic" src={props.theUser.picture} />
+            <div>
+              {props.theUser.firstName} {props.theUser.lastName}
+            </div>
+          </Link>
+        }
+
       </div>
     </nav>
   )

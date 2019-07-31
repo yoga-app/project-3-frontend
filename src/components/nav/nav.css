@@ -1,12 +1,13 @@
 .nav-link {
   text-decoration: none;
-  line-height: 90px;
+  line-height: 100px;
+  display: flex;
 }
 
 .nav-button {
   background-color: #00000000;
   border: none;
-  line-height: 90px;
+  line-height: 100px;
   font-size: 1.2rem;
   font-weight: 100;
   cursor: pointer;
@@ -31,11 +32,43 @@ nav {
 
 .nav-links {
   display: flex;
-  width: 50%;
+  width: 45%;
   justify-content: space-around;
   justify-self: flex-end;
 }
 
 .logo {
   padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kukee {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+
+.kukee-img {
+  width: 75px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  object-fit: none;
+  object-position: -205px -66px;
+  width: 85px;
+  height: 85px;
+  align-self: center;
+}
+
+.profile > * {
+  margin-right: 20px;
+}
+
+.profile {
+  display: flex;
+  width: fit-content;
 }
