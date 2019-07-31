@@ -23,8 +23,10 @@ class Signup extends Component {
       e.preventDefault();
       const uName = this.state.usernameInput;
       const pWord = this.state.passwordInput;
+      const lName = this.state.lastNameInput;
+      const fName = this.state.firstNameInput;
 
-    this.service.signup(uName, pWord)
+    this.service.signup(uName, pWord, lName, fName)
     .then(()=>{
         this.props.toggleForm('signup');
         this.props.getUser();
@@ -37,14 +39,14 @@ class Signup extends Component {
         <div>
           <label>first name:</label>
           <input value={this.state.firstNameInput}
-            name="firstName"
+            name="firstNameInput"
             onChange={this.handleChange}
           />
         </div>
         <div>
           <label>last name:</label>
           <input value={this.state.lastNameInput}
-            name="lastName"
+            name="lastNameInput"
             onChange={this.handleChange}
           />
         </div>
