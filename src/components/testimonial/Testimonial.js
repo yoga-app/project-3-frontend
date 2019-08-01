@@ -5,7 +5,7 @@ class Testimonial extends Component {
   render() {
     return (
       <div className="temporary">
-        <small>[this is the <b>testimonial component]</b></small><br />
+        <small>[this is the <b>testimonial component</b>]</small><br />
         <small>[it renders the image, text and author as a prop]</small>
         <hr />
         <img className="testimonial-picture" src={this.props.image} alt="yogi" />

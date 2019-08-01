@@ -5,7 +5,7 @@ class Quote extends Component {
   render() {
     return (
       <div className="temporary">
-        <small>this is the <b>quote component</b></small>
+        <small>[this is the <b>quote component</b>]</small>
       </div>
     );
   }

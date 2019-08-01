@@ -1,6 +1,7 @@
 .home {
   display: flex;
   flex-direction: column;
+  outline: 3px solid blue;
 }
 
 .testimonial-cards {

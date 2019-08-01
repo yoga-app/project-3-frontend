@@ -13,6 +13,7 @@ import Nav from './components/nav/Nav.js';
 import Footer from './components/footer/Footer';
 import axios from 'axios';
 import AboutUs from './components/about-us/AboutUs';
+import Rates from './components/rates/Rates.js';
 
 class App extends React.Component {
   constructor(props){
@@ -136,6 +137,7 @@ class App extends React.Component {
 
           <Route exact path="/aboutus" component={AboutUs}/>
           <Route exact path="/" component={Main}/>
+          <Route exact path="/rates" component={Rates}/>
 
         </Switch>
         {/* <Main /> */}
