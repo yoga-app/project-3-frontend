@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Link } from 'react';
 import './home.css';
 import Quote from '../quote/Quote.js';
 import Hero from '../hero/Hero.js';
@@ -6,12 +6,14 @@ import Testimonial from '../testimonial/Testimonial.js';
 import Slogan from '../slogan/Slogan.js';
 import Waiver from '../waiver/Waiver.js';
 import Liability from '../liability/Liability.js';
+import FAQ from '../faq/FAQ.js';
 
 class Home extends Component {
   render() {
     return (
       <div className="home">
         <small>[this is the <b>home component</b>]</small>
+        <Link to={FAQ}></Link>
         <Waiver />
         <Liability />
         <Hero />
