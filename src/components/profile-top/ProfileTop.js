@@ -33,7 +33,7 @@ class ProfileTop extends Component {
         </div>
         <div className="edit-button-wrapper">
           <form onSubmit={this.toggleEditForm}>
-          <Button text="Edit Profile" class="edit-profile-button"/>
+          <Button text="EDIT PROFILE" class="edit-profile-button"/>
           </form>
         </div>
       </div>
