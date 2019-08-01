@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, Link, Switch} from 'react-router-dom';
+import {Route, Link, Switch, Redirect} from 'react-router-dom';
 import Main from './components/main/Main';
 import Asana from './components/asana/Asana.js';
 import Signup from './components/signup/Signup.js';
@@ -113,11 +113,14 @@ class App extends React.Component {
             />}
           />
 
-          <Route exact path="/profile" render ={(props)=>
+          <Route exact path="/profile" render ={(props)=> 
+            this.state.currentlyLoggedIn ? 
             <Profile
               {...props} 
               theUser = {this.state.currentlyLoggedIn}
-            />}
+            /> 
+          :
+          <Redirect to="/" />}
           />
 
           {/* <Route exact path="/asanas/:theID" render ={(props)=>
