@@ -40,9 +40,13 @@ function Nav(props){
           </span>
         }
 
-        <Link to="/rates" className="nav-link">rates</Link>
+        <Link to="/classes" className="nav-link">classes</Link>
 
         <Link to="/aboutus" className="nav-link">about us</Link>
+
+        <Link to="/gallery" className="nav-link">gallery</Link>
+
+        <Link to="/newsletter" className="nav-link">newsletter</Link>
 
         {props.theUser && 
           <span>
