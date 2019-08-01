@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Asana from '../asana/Asana';
+// import Asana from '../asana/Asana';
+import Home from '../home/Home.js';
 
 class Main extends Component {
   constructor(props) {
@@ -25,8 +26,8 @@ class Main extends Component {
   render() {
     return (
       <div>
-        
-        <Asana ready={this.state.ready} asanaList={this.state.allAsanas}/>
+        <Home />
+        {/* <Asana ready={this.state.ready} asanaList={this.state.allAsanas}/> */}
       </div>
     );
   }
