@@ -44,6 +44,10 @@ function Nav(props){
 
         <Link to="/aboutus" className="nav-link">about us</Link>
 
+        <Link to="/gallery" className="nav-link">gallery</Link>
+
+        <Link to="/newsletter" className="nav-link">newsletter</Link>
+
         {props.theUser && 
           <span>
             <button className="nav-button" onClick = {doLogoutNowPlease}>logout</button>
