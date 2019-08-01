@@ -22,8 +22,6 @@ class ProfileTop extends Component {
           alt="profile background"
           className="profile-bg-pic"/>
         </div>
-        
-       
         <section className="user-info">
           <div className="user-pic-wrapper">
             <img
