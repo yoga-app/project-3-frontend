@@ -11,6 +11,9 @@ class ProfileTop extends Component {
       firstName: `${this.props.currentUser.firstName}`,
       lastName: `${this.props.currentUser.lastName}`,
       username: `${this.props.currentUser.username}`,
+      showEditPicButton: false,
+      file: null,
+
     };
   }
 
@@ -38,8 +41,40 @@ class ProfileTop extends Component {
     })
   }
 
-  editPic() {
-    console.log('Lets go eat');
+
+  onFormSubmit = (e) => {
+    e.preventDefault();
+    this.fileUpload(this.state.file)
+    .then((response)=>{
+      this.props.getCurrentUser()
+      console.log(response.data);
+      this.setState({showEditPicButton: false})
+    })
+  }
+
+  fileUpload(file){
+    const url = 'http://localhost:5000/api/auth/updateuserinfo/'+this.props.currentUser._id;
+    const formData = new FormData();
+    formData.append('picture',file)
+    const config = {
+        headers: {
+            'content-type': 'multipart/form-data'
+        }
+    }
+    return  axios.post(url, formData,config)
+  }
+
+  triggerInputFile = () => {
+    this.fileInput.click();
+    this.setState({showEditPicButton: true});
+
+  }
+
+  onPicSelect = (e) => {
+    this.setState({file:e.target.files[0]})
+  }
+  cancel = ()=> {
+    this.setState({showEditPicButton: false});
   }
 
   showInfo() {
@@ -50,8 +85,22 @@ class ProfileTop extends Component {
         src={this.props.currentUser.picture}
         alt="user profile"
         className="user-pic-round"
-        onClick={this.editPic}
+        onClick={this.triggerInputFile}
       />
+       <form onSubmit={this.onFormSubmit}>
+           <input 
+            ref={fileInput => this.fileInput = fileInput} 
+            type="file" 
+            hidden 
+            name="picture"
+            onChange={this.onPicSelect}
+            />
+          <button className={this.state.showEditPicButton ? `visible` : `invisible`}>Save Picture</button>
+       </form>
+       <button onClick={this.cancel} className={this.state.showEditPicButton ? `visible` : `invisible`}>Cancel</button>
+            
+         
+     
     </div>
     <div className="user-info-wrapper">
       <h4 className="inline">{this.props.currentUser.firstName} </h4> 
@@ -105,6 +154,7 @@ class ProfileTop extends Component {
           alt="profile background"
           className="profile-bg-pic"/>
         </div>
+       
       {this.state.isEditing ? this.showEditFields() : this.showInfo()}
       </div>
     );
