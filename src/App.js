@@ -119,6 +119,7 @@ class App extends React.Component {
             <Profile
               {...props} 
               theUser = {this.state.currentlyLoggedIn}
+              getCurrentUser = {this.getCurrentlyLoggedInUser}
             /> 
           :
           <Redirect to="/" />}

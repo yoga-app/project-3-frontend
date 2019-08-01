@@ -6,7 +6,7 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <ProfileTop currentUser={this.props.theUser}/>
+        <ProfileTop currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
       </div>
     );
   }
