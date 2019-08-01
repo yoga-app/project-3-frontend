@@ -1,0 +1,23 @@
+.user-pic-round {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 185px;
+  height: 185px;
+  align-self: center;
+}
+.profile-bg-pic {
+  width: 100%
+}
+.user-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.user-pic-wrapper {
+  position: relative;
+  bottom: 90px;
+  flex: 0 0 10%;
+}
+.inline {
+  display: inline;
+}
