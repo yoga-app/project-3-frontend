@@ -4,6 +4,11 @@
   width: 185px;
   height: 185px;
   align-self: center;
+  border: 5px solid #FDF4F3;
+}
+.user-pic-round:hover {
+  border: 5px solid #DF917D;
+  opacity: 0.5;
 }
 .profile-bg-pic {
   width: 100%
@@ -16,8 +21,8 @@
 .user-pic-wrapper {
   position: relative;
   bottom: 90px;
-  flex: 0 0 10%;
 }
+
 .inline {
   display: inline;
 }
