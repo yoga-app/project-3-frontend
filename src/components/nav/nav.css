@@ -57,8 +57,7 @@ nav {
 
 .profile-pic {
   border-radius: 50%;
-  object-fit: none;
-  object-position: -205px -66px;
+  object-fit: cover;
   width: 85px;
   height: 85px;
   align-self: center;
