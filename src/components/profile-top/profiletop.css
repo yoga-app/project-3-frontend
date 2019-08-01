@@ -32,3 +32,6 @@
 .invisible {
   visibility: hidden;
 }
+.delete {
+  background-color: red !important;
+}

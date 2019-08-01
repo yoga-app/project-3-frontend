@@ -146,6 +146,18 @@ class ProfileTop extends Component {
     )
   }
 
+  deleteProfile = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:5000/api/auth/deleteprofile/'+this.props.currentUser._id)
+    .then((response) => {
+      console.log(response);
+      this.props.getCurrentUser()
+    })
+    .catch(err=> {
+      console.log(err);
+    })
+  }
+
   render() {
     return (
       <div className="wrapper">
@@ -156,6 +168,11 @@ class ProfileTop extends Component {
         </div>
        
       {this.state.isEditing ? this.showEditFields() : this.showInfo()}
+      <div className="delete-button-wrapper">
+      <form onSubmit={this.deleteProfile}>
+      <Button text="Delete Profile" class="delete edit-profile-button"/>
+      </form>
+    </div>
       </div>
     );
   }
