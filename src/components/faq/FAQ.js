@@ -3,7 +3,7 @@ import './faq.css';
 import OneQandA from '../oneq-and-a/OneQandA';
 import axios from 'axios';
 
-class FAQ extends Component {
+class Faq extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class FAQ extends Component {
     }
   }
   componentDidMount() {
-    axios.get('/faq/getall')
+    axios.get('http://localhost:5000/faq/getall')
     .then(response=> {
       this.setState({ready: true, allFAQ: response.data})
     })
@@ -39,4 +39,4 @@ class FAQ extends Component {
   }
 }
 
-export default FAQ;
+export default Faq;

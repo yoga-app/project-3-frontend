@@ -14,6 +14,7 @@ import AboutUs from './components/about-us/AboutUs';
 import Classes from './components/classes/Classes.js';
 import Newsletter from './components/newsletter/Newsletter.js';
 import Gallery from './components/gallery/Gallery.js';
+import Faq from './components/faq/Faq';
 
 class App extends React.Component {
   constructor(props){
@@ -141,6 +142,7 @@ class App extends React.Component {
           <Route exact path="/classes" component={Classes}/>
           <Route exact path="/newsletter" component={Newsletter}/>
           <Route exact path="/gallery" component={Gallery}/>
+          <Route exact path="/faq" component={Faq}/>
 
         </Switch>
         {/* <Main /> */}
