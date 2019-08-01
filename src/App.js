@@ -11,7 +11,7 @@ import Nav from './components/nav/Nav.js';
 import Footer from './components/footer/Footer';
 import axios from 'axios';
 import AboutUs from './components/about-us/AboutUs';
-import Rates from './components/rates/Rates.js';
+import Classes from './components/classes/Classes.js';
 import Newsletter from './components/newsletter/Newsletter.js';
 import Gallery from './components/gallery/Gallery.js';
 
@@ -138,7 +138,7 @@ class App extends React.Component {
 
           <Route exact path="/aboutus" component={AboutUs}/>
           <Route exact path="/" component={Main}/>
-          <Route exact path="/rates" component={Rates}/>
+          <Route exact path="/classes" component={Classes}/>
           <Route exact path="/newsletter" component={Newsletter}/>
           <Route exact path="/gallery" component={Gallery}/>
 

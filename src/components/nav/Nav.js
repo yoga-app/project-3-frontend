@@ -40,7 +40,7 @@ function Nav(props){
           </span>
         }
 
-        <Link to="/rates" className="nav-link">rates</Link>
+        <Link to="/classes" className="nav-link">classes</Link>
 
         <Link to="/aboutus" className="nav-link">about us</Link>
 
