@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AuthService from '../../services/AuthServices.js';
-import Button from '../button/Button.js'
+import Button from '../button/Button.js';
+import './login.css';
 
 class Login extends Component {
   constructor(props){
@@ -30,23 +31,22 @@ class Login extends Component {
 
   render(){
     return(
-      <form onSubmit = {this.tryToLogin}>
-          <legend>Username</legend>
+      <form className="form-login" onSubmit = {this.tryToLogin}>
+        <div>
+          <label>e-mail:</label>
           <input value={this.state.usernameInput}
             name="usernameInput"
             onChange={this.handleChange}
           />
-
-          <legend>Password</legend>
+        </div>
+        <div>
+          <label>password:</label>
           <input value={this.state.passwordInput} 
             name="passwordInput"
             onChange={this.handleChange}
           />
-
-
-
+        </div>
         <Button text="LOGIN" class="login-signup"/>
-
       </form>
     )
   }

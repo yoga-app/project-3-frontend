@@ -37,20 +37,6 @@ class Signup extends Component {
     return(
       <form className="form" onSubmit = {this.tryToSignUp}>
         <div>
-          <label>first name:</label>
-          <input value={this.state.firstNameInput}
-            name="firstNameInput"
-            onChange={this.handleChange}
-          />
-        </div>
-        <div>
-          <label>last name:</label>
-          <input value={this.state.lastNameInput}
-            name="lastNameInput"
-            onChange={this.handleChange}
-          />
-        </div>
-        <div>
           <label>e-mail:</label>
           <input value={this.state.usernameInput}
             name="usernameInput"
@@ -61,6 +47,20 @@ class Signup extends Component {
           <label>password:</label>
           <input value={this.state.passwordInput} 
             name="passwordInput"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div>
+          <label>first name:</label>
+          <input value={this.state.firstNameInput}
+            name="firstNameInput"
+            onChange={this.handleChange}
+          />
+        </div>
+        <div>
+          <label>last name:</label>
+          <input value={this.state.lastNameInput}
+            name="lastNameInput"
             onChange={this.handleChange}
           />
         </div>
