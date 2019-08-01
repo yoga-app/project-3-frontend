@@ -31,8 +31,8 @@ class Faq extends Component {
 
   render() {
     return (
-      <div className="temporary">
-        <small>[this is the <b>FAQ component</b>]</small>
+      <div className="faq">
+        <h1>Frequently Asked Questions</h1>
         {this.state.ready && this.showQandA()}
       </div>
     );
