@@ -15,20 +15,39 @@ class Home extends Component {
     super(props);
     this.state = {
       quote: {},
+      testimonials: [],
       ready: false,
     }
   }
   
   componentDidMount() {
     axios.get('http://localhost:5000/quote/randomQuote')
-    .then((response)=> {
-      this.setState({quote: response.data, ready: true})
+    .then((randomQuote)=> {
+      axios.get('http://localhost:5000/testimonial/getall')
+      .then(allTestimonials=> {
+        this.setState({quote: randomQuote.data, testimonials: allTestimonials.data, ready: true})
+      })
+      .catch(err => {
+        console.log('Sommething went wrong getting all testimonials')
+      })
     })
     .catch((err)=> {
       console.log('Something went wrong getting random quote');
     })
   }
 
+  showTestimonials() {
+    return this.state.testimonials.map(eachT=> {
+      return( 
+        <Testimonial 
+        text={eachT.text}
+        picture={eachT.picture} 
+        author={eachT.author}
+        rating={eachT.rating}
+        attended={eachT.attended} />
+      )
+    })
+  }
 
   render() {
     return (
@@ -40,9 +59,7 @@ class Home extends Component {
         <Hero />
         {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
         <section className="testimonial-cards">
-          <Testimonial text="blah blah blah awesome" image="/images/logo.svg" author="That Cool Guy" />
-          <Testimonial text="bleh bleh bleh love it" image="/images/logo.svg" author="That Cool Chick" />
-          <Testimonial text="blih blih blih amazinf" image="/images/logo.svg" author="That Cool Wolf" />
+          {this.state.ready && this.showTestimonials()}
         </section>
         <Slogan />
       </div>
