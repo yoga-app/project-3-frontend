@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import "./footer.css";
 
 class Footer extends Component {
@@ -12,7 +13,7 @@ class Footer extends Component {
         </div>
         <div className="footer-middle">
           <ul>
-            <li>Oat cake powder bear claw wafer apple pie brownie</li>
+            <li><Link to='/faq'>Frequently Asked Questions</Link></li>
             <li>Toffee dessert wafer marshmallow brownie cheesecake.</li>
             <li>Candy sugar plum chocolate bar dessert</li>
           </ul>

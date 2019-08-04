@@ -31,6 +31,7 @@ nav {
 }
 
 .nav-links {
+  letter-spacing: 0.05rem;
   display: flex;
   width: 60%;
   justify-content: space-around;

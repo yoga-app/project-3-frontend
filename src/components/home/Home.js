@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import './home.css';
 import Quote from '../quote/Quote.js';
 import Hero from '../hero/Hero.js';
@@ -53,7 +52,6 @@ class Home extends Component {
     return (
       <div className="home">
         <small>[this is the <b>home component</b>]</small>
-        <Link to='/faq'>FAQ</Link>
         <Waiver />
         <Liability />
         <Hero />
