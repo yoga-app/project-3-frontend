@@ -4,6 +4,7 @@ import ProfileTop from '../profile-top/ProfileTop.js';
 import PrivateGallery from '../private-gallery/PrivateGallery.js';
 import ProgressTracker from '../progress-tracker/ProgressTracker.js';
 import Subscription from '../subscription/Subscription.js';
+import Docs from '../docs/Docs.js';
 
 class Profile extends Component {
   render() {
@@ -13,6 +14,7 @@ class Profile extends Component {
         <PrivateGallery />
         <ProgressTracker />
         <Subscription />
+        <Docs />
       </div>
     );
   }

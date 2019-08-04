@@ -5,7 +5,7 @@ import './liability.css';
 class Liability extends Component {
   render () {
     return (
-      <a href={pdf}>OPEN LIABILITY RELEASE</a>
+      <a href={pdf} target="_blank">OPEN LIABILITY RELEASE</a>
       )
   }
 }

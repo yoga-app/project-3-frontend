@@ -5,7 +5,7 @@ import './waiver.css';
 class Waiver extends Component {
   render () {
     return (
-      <a href={pdf}>OPEN WAIVER</a>
+      <a href={pdf} target="_blank">OPEN WAIVER</a>
       )
   }
 }

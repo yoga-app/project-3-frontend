@@ -4,8 +4,6 @@ import Quote from '../quote/Quote.js';
 import Hero from '../hero/Hero.js';
 import Testimonial from '../testimonial/Testimonial.js';
 import Slogan from '../slogan/Slogan.js';
-import Waiver from '../waiver/Waiver.js';
-import Liability from '../liability/Liability.js';
 import axios from 'axios';
 
 
@@ -52,8 +50,6 @@ class Home extends Component {
     return (
       <div className="home">
         <small>[this is the <b>home component</b>]</small>
-        <Waiver />
-        <Liability />
         <Hero />
         {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
         <section className="testimonial-cards">
