@@ -1,0 +1,18 @@
+.gallery-card {
+  border: 1px solid orange;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  width: 470px;
+}
+.gallery-category {
+  border: 1px solid #999;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 3px;
+  color: white;
+  background-color: #999;
+  margin: 0 5px;
+  font-size: 14px;
+}
