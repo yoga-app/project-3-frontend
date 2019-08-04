@@ -13,6 +13,7 @@
   padding-right: 30px;
   width: 150px;
   padding-bottom: 40px;
+  background-image: linear-gradient(to left, rgba(223, 145, 125, 0.507) 1%, rgba(241, 203, 170, 0.466) 30%, #00000000 70%);
 }
 
 .classes h4 {
@@ -20,11 +21,14 @@
 }
 
 .classes {
+  padding: 30px;
   padding-bottom: 100px;
-  margin: 30px;
+  min-height: 400px;
 }
 
 .off {
+  width: fit-content;
+  background-image: linear-gradient(to right, rgba(223, 145, 125, 0.507) 1%, rgba(241, 203, 170, 0.466) 30%, #00000000 70%);
   border-left: 10px solid rgba(223, 145, 125, 0.473);
   border-radius: 10px;
   padding-left: 30px;

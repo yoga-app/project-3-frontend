@@ -1,0 +1,14 @@
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1491172700640-4f1a131a3670");
+  background-size: cover;
+  background-position: 0 -200px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: -3;
+}
+
+.hero section {
+  height: 100px;
+}

@@ -13,21 +13,11 @@
   cursor: pointer;
 }
 
-
-.color-pallete {
-  /* accent: */
-  color: #6BD5D3;
-  color: #413B3D;
-  /* main: */
-  color: #DF917D;
-  color: #F1CBAA;
-  color: #FDF4F3;
-}
-
 nav {
+  z-index: 20;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(rgba(223, 145, 125, 0.507) 1%, rgba(241, 203, 170, 0.466) 60%, #FDF4F3 100%);
+  background-image: linear-gradient(rgb(223, 145, 125) 1%, rgb(241, 203, 170) 60%, #00000000 100%);
 }
 
 .nav-links {
@@ -57,10 +47,11 @@ nav {
 }
 
 .profile-pic {
+  border: 2px groove rgb(241, 203, 170);
   border-radius: 50%;
   object-fit: cover;
-  width: 85px;
-  height: 85px;
+  width: 60px;
+  height: 60px;
   align-self: center;
 }
 

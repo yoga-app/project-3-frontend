@@ -5,7 +5,8 @@
   justify-content: space-evenly;
   align-items: flex-start;
   padding: 20px 40px;
-  background-color: #DF917D;;
+  /* background-color: #DF917D; */
+  background-color: #ecdbcb;
   line-height: 1.7rem;
 }
 
@@ -36,7 +37,7 @@
 .footer li a:after {
   content: "";
   display: block;
-  outline: 2px solid #DF917D;
+  outline: 2px solid #ecdbcb;
   width: 0;
 }
 

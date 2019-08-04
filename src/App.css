@@ -4,7 +4,8 @@
   color: #413B3D;
   /* main: */
   color: #DF917D;
-  color: #F1CBAA;
+  /* footer: */ color: #ecdbcb;
+  /* alternative: */ color: #F1CBAA;
   color: #FDF4F3;
 }
 
@@ -14,7 +15,6 @@
   font-weight: 100;
   font-size: 1.3rem;
   color: #413B3D;
-  background-color: #FDF4F3;
 }
 
 a:hover, button:hover {
@@ -31,6 +31,7 @@ a:hover, button:hover {
   padding: 10px;
 }
 
-a:visited {
-  color: rgb(153, 102, 90);
+a {
+  color: #413B3D;
+  font-weight: 300;
 }

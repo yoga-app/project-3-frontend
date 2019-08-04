@@ -2,19 +2,20 @@ import React from 'react';
 import './App.css';
 import {Route, Link, Switch, Redirect} from 'react-router-dom';
 import Main from './components/main/Main';
-import Asana from './components/asana/Asana.js';
-import Signup from './components/signup/Signup.js';
-import Login from './components/login/Login.js';
-import Profile from './components/profile/Profile.js';
-import AuthService from './services/AuthServices.js';
-import Nav from './components/nav/Nav.js';
+import Asana from './components/asana/Asana';
+import Signup from './components/signup/Signup';
+import Login from './components/login/Login';
+import Profile from './components/profile/Profile';
+import AuthService from './services/AuthServices';
+import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import axios from 'axios';
 import AboutUs from './components/about-us/AboutUs';
-import Classes from './components/classes/Classes.js';
-import Newsletter from './components/newsletter/Newsletter.js';
-import Gallery from './components/gallery/Gallery.js';
+import Classes from './components/classes/Classes';
+import Newsletter from './components/newsletter/Newsletter';
+import Gallery from './components/gallery/Gallery';
 import Faq from './components/faq/Faq';
+import Mandala from './components/mandala/Mandala';
 
 class App extends React.Component {
   constructor(props){
@@ -82,6 +83,7 @@ class App extends React.Component {
     return (
       <div className="app">
 
+        <Mandala />
         <Nav
           theUser = {this.state.currentlyLoggedIn} 
           pleaseLogOut = {()=> this.service.logout()}
@@ -141,7 +143,14 @@ class App extends React.Component {
           <Route exact path="/" component={Main}/>
           <Route exact path="/classes" component={Classes}/>
           <Route exact path="/newsletter" component={Newsletter}/>
-          <Route exact path="/gallery" component={Gallery}/>
+
+          <Route exact path="/gallery" render ={(props)=> 
+            <Gallery
+              {...props} 
+              theUser = {this.state.currentlyLoggedIn}
+              getCurrentUser = {this.getCurrentlyLoggedInUser}/>}
+              />
+              
           <Route exact path="/faq" component={Faq}/>
 
         </Switch>

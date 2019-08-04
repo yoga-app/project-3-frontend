@@ -5,6 +5,8 @@ import Hero from '../hero/Hero.js';
 import Testimonial from '../testimonial/Testimonial.js';
 import Slogan from '../slogan/Slogan.js';
 import axios from 'axios';
+import Mandala from '../mandala/Mandala';
+
 
 
 class Home extends Component {
@@ -36,7 +38,7 @@ class Home extends Component {
   showTestimonials() {
     return this.state.testimonials.map(eachT=> {
       return( 
-        <Testimonial 
+        <Testimonial
         text={eachT.text}
         picture={eachT.picture} 
         author={eachT.author}
@@ -46,10 +48,18 @@ class Home extends Component {
     })
   }
 
+  showMandalaFourTimes() {
+    let result = [];
+    for(let i=0;i < 4; i++){
+      result.push(<Mandala key={i*2}/>)
+    }
+    return <div>{result}</div>
+  }
+
   render() {
     return (
       <div className="home">
-        <small>[this is the <b>home component</b>]</small>
+        {this.showMandalaFourTimes()}
         <Hero />
         {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
         <section className="testimonial-cards">
