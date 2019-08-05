@@ -152,7 +152,11 @@ class App extends React.Component {
               getCurrentUser = {this.getCurrentlyLoggedInUser}/>}
               />
               
-          <Route exact path="/faq" component={Faq}/>
+          <Route exact path="/faq" render ={(props)=> 
+            <Faq
+              {...props} 
+              theUser = {this.state.currentlyLoggedIn}
+              getCurrentUser = {this.getCurrentlyLoggedInUser}/>}/>
 
         </Switch>
         {/* <Main /> */}
