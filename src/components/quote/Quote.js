@@ -4,8 +4,7 @@ import './quote.css';
 class Quote extends Component {
   render() {
     return (
-      <div className="temporary">
-        <small>[this is the <b>connected</b> quote component]</small>
+      <div className="quote">
         <div>{this.props.text}</div>
         <div>{this.props.author}</div>
       </div>

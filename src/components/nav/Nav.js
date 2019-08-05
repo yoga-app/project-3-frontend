@@ -26,10 +26,12 @@ function Nav(props){
     // newsletter feed
 
     <nav>
-      <div className="logo">
-        <img className="kukee-img" src="/images/logo.svg" alt="logo" />
-        <p className="kukee">Kukee <span>Bliss Yoga</span></p>
-      </div>
+      <NavLink to="/">
+        <div className="logo">
+          <img className="kukee-img" src="/images/logo.svg" alt="logo" />
+          <p className="kukee">Kukee <span>Bliss Yoga</span></p>
+        </div>
+      </NavLink>
       <div className="nav-links">
         <NavLink to="/" className="nav-link">home</NavLink>
 
@@ -46,7 +48,7 @@ function Nav(props){
 
         <NavLink to="/gallery" className="nav-link">gallery</NavLink>
 
-        <NavLink to="/newsletter" className="nav-link">newsletter</NavLink>
+        {/* <NavLink to="/newsletter" className="nav-link">newsletter</NavLink> */}
 
         {props.theUser && 
           <span>

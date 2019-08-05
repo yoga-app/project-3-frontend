@@ -60,15 +60,13 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-          {this.showMandalaFourTimes()}
-        <Hero />
-        <div className="after-hero">
+          {/* {this.showMandalaFourTimes()} */}
+        <Hero showMandala={this.showMandalaFourTimes}/>
           {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
           <section className="testimonial-cards">
             {this.state.ready && this.showTestimonials()}
           </section>
           <Slogan />
-        </div>
       </div>
     );
   }
