@@ -21,7 +21,7 @@ class AboutUs extends Component {
         <div className="map-wrap">
           <h2>Where to find us</h2>
           <div className="contact-info">
-            <p>(800) GALLETA</p>
+            <p>(954)544-7806</p>
             <p>Chris Chiropractic Services</p>
             <p>100, E Lee Road, Suite D, Taylors, SC 29687</p>
           </div>
