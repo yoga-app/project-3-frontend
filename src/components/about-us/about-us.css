@@ -1,7 +1,7 @@
 .about-us {
   display: flex;
   flex-direction: column;
-  padding: 50px 100px;
+  padding: 140px 100px 50px 100px;
 }
 
 .about-us > * {
@@ -10,18 +10,18 @@
 }
 
 .about-us > :nth-child(odd) {
-  border-right: 10px solid rgba(223, 145, 125, 0.473);
+  background-image: linear-gradient(to left, rgba(241, 203, 170, 0.600) 1%, rgba(241, 203, 170, 0.400) 30%, #00000000 70%);
   border-radius: 10px;
-  padding-right: 30px;
+  padding: 30px;
   text-align: right;
   align-self: flex-end;
 }
 
 .about-us > :nth-child(even) {
-  border-left: 10px solid rgba(223, 145, 125, 0.473);
+  background-image: linear-gradient(to right, rgba(241, 203, 170, 0.600) 1%, rgba(241, 203, 170, 0.400) 30%, #00000000 70%);
   border-radius: 10px;
   text-align: left;
-  padding-left: 30px;
+  padding: 30px;
 }
 
 .live-your-happiness {

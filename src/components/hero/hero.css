@@ -1,9 +1,8 @@
 .hero {
   background-color: #c29061;
   background-image: url("/images/hero.jpeg");
-  background-size: 115%;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 -100px;
   width: 100vw;
   min-height: 115vh;
   min-width: 950px;
@@ -13,9 +12,3 @@
 .hero section {
   height: 100px;
 }
-
-/* .mandala-section {
-  position: absolute;
-  top: 500px;
-  left: 200px;
-} */

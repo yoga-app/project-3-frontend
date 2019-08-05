@@ -8,28 +8,34 @@
 }
 
 .classes ul {
-  border-right: 10px solid rgba(223, 145, 125, 0.473);
   border-radius: 10px;
   padding-right: 30px;
   width: 150px;
-  padding-bottom: 40px;
-  background-image: linear-gradient(to left, rgba(223, 145, 125, 0.507) 1%, rgba(241, 203, 170, 0.466) 30%, #00000000 70%);
+  padding: 30px;
+  background-image: linear-gradient(to left, rgba(241, 203, 170, 0.600) 1%, rgba(241, 203, 170, 0.400) 30%, #00000000 70%);
 }
 
 .classes h4 {
   margin: 10px;
+  font-weight: 600;
+  font-size: 2.2rem;
 }
 
 .classes {
-  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 140px 100px 50px 100px;
   padding-bottom: 100px;
   min-height: 400px;
 }
 
 .off {
   width: fit-content;
-  background-image: linear-gradient(to right, rgba(223, 145, 125, 0.507) 1%, rgba(241, 203, 170, 0.466) 30%, #00000000 70%);
-  border-left: 10px solid rgba(223, 145, 125, 0.473);
+  background-image: linear-gradient(to right, rgba(241, 203, 170, 0.600) 1%, rgba(241, 203, 170, 0.400) 30%, #00000000 70%);
   border-radius: 10px;
-  padding-left: 30px;
+  padding: 30px;
+}
+
+.schedule {
+  text-align: right;
 }

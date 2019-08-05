@@ -10,6 +10,7 @@
   color: #ecdbcb;
   width: 100vw;
   height: 550px;
+  box-shadow: 0 -10px 10px rgba(128, 128, 128, 0.664);
 }
 
 .slogan h1 {

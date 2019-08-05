@@ -1,13 +1,13 @@
 .quote {
-  height: 350px;
+  height: fit-content;
   text-align: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   font-size: 2.5rem;
   color: #8d5b2d;
-  padding: 0 100px;
-  margin-top: -20px;
+  padding: 100px;
+  margin-top: -30px;
   background-image: linear-gradient(#00000000 3%, #c29061 6%, #00000000 100%);
 }
 
