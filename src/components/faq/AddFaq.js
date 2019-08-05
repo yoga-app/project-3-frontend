@@ -19,6 +19,7 @@ class AddFaq extends Component {
     
     axios.post('http://localhost:5000/faq/create', this.state)
     .then(response=> {
+      this.setState({question: '', answer: ''})
       this.props.update();
     })
     .catch(err=> {

@@ -5,8 +5,8 @@ class OneQandA extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: '',
-      answer: '',
+      question: `${this.props.question}`,
+      answer: `${this.props.answer}`,
       isEditing: false,
     }
   }
@@ -51,10 +51,11 @@ class OneQandA extends Component {
         <form className="faq-edit-form" onSubmit={this.onFormSubmit}>
           <legend htmlFor="question">Updated question</legend>
           <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
-          <legend htmlFor="answer">Updated question</legend>
+          <legend htmlFor="answer">Updated answer</legend>
           <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
           <button>Save changes</button>
         </form>
+        <button onClick={this.cancel}>Cancel changes</button>
       </div>
     )
   }

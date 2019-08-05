@@ -6,6 +6,7 @@ import Button from "../button/Button";
 class GalleryItem extends Component {
   constructor(props) {
     super(props);
+   
     this.state ={
       title: '',
       text: '',
@@ -14,9 +15,11 @@ class GalleryItem extends Component {
       category: '',
       isEditing: false,
       refresh: false,
+      liked: false,
     }
   }
-  
+
+    
 submitEditForm = (e) => {
   e.preventDefault();
   const config = {
@@ -81,9 +84,78 @@ return (
 )
 }
 
+componentDidMount ()  {
+  if(this.props.theUser && this.props.likedByArr.includes(this.props.theUser._id))
+  {
+    this.setState({liked: true})
+  }
+}
+
+addLike = () => {
+  axios.post('http://localhost:5000/galleryitem/likebyid/'+this.props.id, {
+    direction: 'add',
+    userID: this.props.theUser._id 
+  })
+  .then((response)=> {
+    console.log(response);
+    this.setState({liked: true})
+  })
+  .catch(err=> {
+    console.log(err);
+  })
+
+  axios.post('http://localhost:5000/api/auth/updatefavorited/'+this.props.theUser._id, {
+    direction: 'add',
+    itemID: this.props.id
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err=> {
+    console.log(err);
+  })
+}
+
+removeLike = () => {
+  axios.post('http://localhost:5000/galleryitem/likebyid/'+this.props.id, {
+    direction: 'remove',
+    userID: this.props.theUser._id 
+  })
+  .then((response)=> {
+    console.log(response);
+    this.setState({liked: false})
+  })
+  .catch(err=> {
+    console.log(err);
+  })
+
+  axios.post('http://localhost:5000/api/auth/updatefavorited/'+this.props.theUser._id, {
+    direction: 'remove',
+    itemID: this.props.id
+  })
+  .then(response => {
+    console.log(response);
+  })
+  .catch(err=> {
+    console.log(err);
+  })
+}
+
 showInfo() {
   return (<div className="gallery-card" >
   <h3>{this.props.title}</h3>
+  
+  {this.props.theUser && (this.state.liked ? 
+  <div> 
+    <p>Liked!</p>
+  <button onClick={this.removeLike}>Remove like</button>
+  </div>
+    :
+    <div> 
+    <button onClick={this.addLike}>Like it!</button>
+    </div>)
+  }
+
   {this.props.link ? 
   
     <iframe title="video"
