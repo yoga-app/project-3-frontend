@@ -5,64 +5,64 @@ class Mandala extends Component {
   render() {
     return (
       <div className="mandala">
-        <div class="container_1">
-          <div class="big-leaf_1"><div></div><div></div></div>
-          <div class="big-leaf_2"><div></div><div></div></div>
-          <div class="big-leaf_3"><div></div><div></div></div>
-          <div class="big-leaf_4"><div></div><div></div></div>
-          <div class="big-leaf_5"><div></div><div></div></div>
-          <div class="big-leaf_6"><div></div><div></div></div>
-          <div class="big-leaf_7"><div></div><div></div></div>
-          <div class="big-leaf_8"><div></div><div></div></div>
-          <div class="big-leaf_9"><div></div><div></div></div>
-          <div class="big-leaf_10"><div></div><div></div></div>
-          <div class="big-leaf_11"><div></div><div></div></div>
-          <div class="big-leaf_12"><div></div><div></div></div>
+        <div className="container_1">
+          <div className="big-leaf_1"><div></div><div></div></div>
+          <div className="big-leaf_2"><div></div><div></div></div>
+          <div className="big-leaf_3"><div></div><div></div></div>
+          <div className="big-leaf_4"><div></div><div></div></div>
+          <div className="big-leaf_5"><div></div><div></div></div>
+          <div className="big-leaf_6"><div></div><div></div></div>
+          <div className="big-leaf_7"><div></div><div></div></div>
+          <div className="big-leaf_8"><div></div><div></div></div>
+          <div className="big-leaf_9"><div></div><div></div></div>
+          <div className="big-leaf_10"><div></div><div></div></div>
+          <div className="big-leaf_11"><div></div><div></div></div>
+          <div className="big-leaf_12"><div></div><div></div></div>
         </div>
           
-        <div class="container_2">
-          <div class="line_1"></div>
-          <div class="line_2"></div>
-          <div class="line_3"></div>
-          <div class="line_4"></div>
-          <div class="line_5"></div>
-          <div class="line_6"></div>
-          <div class="line_7"></div>
-          <div class="line_8"></div>
-          <div class="line_9"></div>
-          <div class="line_10"></div>
-          <div class="line_11"></div>
-          <div class="line_12"></div>
+        <div className="container_2">
+          <div className="line_1"></div>
+          <div className="line_2"></div>
+          <div className="line_3"></div>
+          <div className="line_4"></div>
+          <div className="line_5"></div>
+          <div className="line_6"></div>
+          <div className="line_7"></div>
+          <div className="line_8"></div>
+          <div className="line_9"></div>
+          <div className="line_10"></div>
+          <div className="line_11"></div>
+          <div className="line_12"></div>
         </div>
           
-        <div class="container_3">
-          <div class="circle_1"><div></div><div></div></div>
-          <div class="circle_2"><div></div><div></div></div>
-          <div class="circle_3"><div></div><div></div></div>
-          <div class="circle_4"><div></div><div></div></div>
-          <div class="circle_5"><div></div><div></div></div>
-          <div class="circle_6"><div></div><div></div></div>
-          <div class="circle_7"><div></div><div></div></div>
-          <div class="circle_8"><div></div><div></div></div>
-          <div class="circle_9"><div></div><div></div></div>
-          <div class="circle_10"><div></div><div></div></div>
-          <div class="circle_11"><div></div><div></div></div>
-          <div class="circle_12"><div></div><div></div></div>
+        <div className="container_3">
+          <div className="circle_1"><div></div><div></div></div>
+          <div className="circle_2"><div></div><div></div></div>
+          <div className="circle_3"><div></div><div></div></div>
+          <div className="circle_4"><div></div><div></div></div>
+          <div className="circle_5"><div></div><div></div></div>
+          <div className="circle_6"><div></div><div></div></div>
+          <div className="circle_7"><div></div><div></div></div>
+          <div className="circle_8"><div></div><div></div></div>
+          <div className="circle_9"><div></div><div></div></div>
+          <div className="circle_10"><div></div><div></div></div>
+          <div className="circle_11"><div></div><div></div></div>
+          <div className="circle_12"><div></div><div></div></div>
         </div>
           
-        <div class="container_4">
-          <div class="triangel_1"></div>
-          <div class="triangel_2"></div>
-          <div class="triangel_3"></div>
-          <div class="triangel_4"></div>
-          <div class="triangel_5"></div>
-          <div class="triangel_6"></div>
-          <div class="triangel_7"></div>
-          <div class="triangel_8"></div>
-          <div class="triangel_9"></div>
-          <div class="triangel_10"></div>
-          <div class="triangel_11"></div>
-          <div class="triangel_12"></div>
+        <div className="container_4">
+          <div className="triangle_1"></div>
+          <div className="triangle_2"></div>
+          <div className="triangle_3"></div>
+          <div className="triangle_4"></div>
+          <div className="triangle_5"></div>
+          <div className="triangle_6"></div>
+          <div className="triangle_7"></div>
+          <div className="triangle_8"></div>
+          <div className="triangle_9"></div>
+          <div className="triangle_10"></div>
+          <div className="triangle_11"></div>
+          <div className="triangle_12"></div>
         </div>
       </div>
     );

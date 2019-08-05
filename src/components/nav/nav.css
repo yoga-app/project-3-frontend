@@ -17,7 +17,7 @@ nav {
   z-index: 20;
   display: flex;
   justify-content: space-between;
-  background-image: linear-gradient(rgb(223, 145, 125) 1%, rgb(241, 203, 170) 60%, #00000000 100%);
+  background-image: linear-gradient(#f1cbaa 1%, #f1cbaab7 60%, #00000000 100%);
 }
 
 .nav-links {

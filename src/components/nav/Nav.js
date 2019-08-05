@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './nav.css';
 
 
@@ -27,11 +27,11 @@ function Nav(props){
 
     <nav>
       <div className="logo">
-        <img className="kukee-img" src="/images/logo.svg" />
+        <img className="kukee-img" src="/images/logo.svg" alt="logo" />
         <p className="kukee">Kukee Bliss Yoga</p>
       </div>
       <div className="nav-links">
-        <Link to="/" className="nav-link">home</Link>
+        <NavLink to="/" className="nav-link">home</NavLink>
 
         {!props.theUser && 
           <span>
@@ -40,13 +40,13 @@ function Nav(props){
           </span>
         }
 
-        <Link to="/classes" className="nav-link">classes</Link>
+        <NavLink to="/classes" className="nav-link">classes</NavLink>
 
-        <Link to="/aboutus" className="nav-link">about us</Link>
+        <NavLink to="/aboutus" className="nav-link">about us</NavLink>
 
-        <Link to="/gallery" className="nav-link">gallery</Link>
+        <NavLink to="/gallery" className="nav-link">gallery</NavLink>
 
-        <Link to="/newsletter" className="nav-link">newsletter</Link>
+        <NavLink to="/newsletter" className="nav-link">newsletter</NavLink>
 
         {props.theUser && 
           <span>
@@ -55,12 +55,12 @@ function Nav(props){
         }
 
         {props.theUser && 
-          <Link to="/profile" className="nav-link profile">
-            <img className="profile-pic" src={props.theUser.picture} />
+          <NavLink to="/profile" className="nav-link profile">
+            <img className="profile-pic" alt="profile" src={props.theUser.picture} />
             <div>
               {props.theUser.firstName} {props.theUser.lastName}
             </div>
-          </Link>
+          </NavLink>
         }
 
       </div>

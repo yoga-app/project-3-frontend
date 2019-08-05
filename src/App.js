@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Route, Link, Switch, Redirect} from 'react-router-dom';
+import {Route, Switch, Redirect} from 'react-router-dom';
 import Main from './components/main/Main';
 import Asana from './components/asana/Asana';
 import Signup from './components/signup/Signup';
@@ -15,7 +15,7 @@ import Classes from './components/classes/Classes';
 import Newsletter from './components/newsletter/Newsletter';
 import Gallery from './components/gallery/Gallery';
 import Faq from './components/faq/Faq';
-import Mandala from './components/mandala/Mandala';
+// import Mandala from './components/mandala/Mandala';
 
 class App extends React.Component {
   constructor(props){
@@ -82,8 +82,9 @@ class App extends React.Component {
 
     return (
       <div className="app">
-
-        <Mandala />
+        {/* <div>
+          <Mandala />
+        </div> */}
         <Nav
           theUser = {this.state.currentlyLoggedIn} 
           pleaseLogOut = {()=> this.service.logout()}

@@ -39,6 +39,7 @@ class Home extends Component {
     return this.state.testimonials.map(eachT=> {
       return( 
         <Testimonial
+        key={eachT._id}
         text={eachT.text}
         picture={eachT.picture} 
         author={eachT.author}
@@ -51,7 +52,7 @@ class Home extends Component {
   showMandalaFourTimes() {
     let result = [];
     for(let i=0;i < 4; i++){
-      result.push(<Mandala key={i*2}/>)
+      result.push(<Mandala key={i}/>)
     }
     return <div>{result}</div>
   }
@@ -59,13 +60,17 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        {this.showMandalaFourTimes()}
+        <div className="mandala-position">
+          {this.showMandalaFourTimes()}
+        </div>
         <Hero />
-        {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
-        <section className="testimonial-cards">
-          {this.state.ready && this.showTestimonials()}
-        </section>
-        <Slogan />
+        <div className="after-hero">
+          {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
+          <section className="testimonial-cards">
+            {this.state.ready && this.showTestimonials()}
+          </section>
+          <Slogan />
+        </div>
       </div>
     );
   }
