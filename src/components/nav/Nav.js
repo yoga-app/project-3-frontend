@@ -26,7 +26,7 @@ function Nav(props){
     // newsletter feed
 
     <nav>
-      <NavLink to="/">
+      <NavLink className="logo-link" to="/">
         <div className="logo">
           <img className="kukee-img" src="/images/logo.svg" alt="logo" />
           <p className="kukee">Kukee <span>Bliss Yoga</span></p>

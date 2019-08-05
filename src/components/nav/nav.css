@@ -19,6 +19,7 @@ nav {
   position: absolute;
   width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-image: linear-gradient(#f1cbaa 1%, #f1cbaab7 60%, #00000000 100%);
 }
@@ -34,31 +35,31 @@ nav {
 .logo {
   margin: 10px 30px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background-image: radial-gradient(#f5e7dc 20%, #00000000 60%);
-  border-radius: 50%;
-  height: 90px;
+  background-image: linear-gradient(to right, #ffffff82 43%, #00000000 70%);
+  height: 30px;
+  width: 204px;
 }
 
 .kukee {
-  text-shadow: 2px 2px #f5e7dc, -2px -2px #f5e7dc;
+  text-shadow: 5px 5px 8px #f5e7dc;
   position: relative;
-  color: #427c7b;
-  top: -20px;
+  color: #413B3D;
   margin: 0;
+  margin-left: -6.9px;
   font-weight: 500;
-  font-size: 1.5rem;
-  word-spacing: -.4rem;
+  font-size: 1.3rem;
+  word-spacing: -0.25rem;
+  letter-spacing: -0.09rem;
 }
 
 .kukee span {
-  word-spacing: -.7rem;
+  word-spacing: -0.5rem;
 }
 
 
 .kukee-img {
-  width: 75px;
+  width: 52px;
 }
 
 .profile-pic {
@@ -81,4 +82,8 @@ nav {
 .profile {
   display: flex;
   width: fit-content;
+}
+
+.logo-link {
+  text-decoration: none;
 }
