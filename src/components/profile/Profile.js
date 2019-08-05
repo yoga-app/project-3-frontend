@@ -11,7 +11,7 @@ class Profile extends Component {
     return (
       <div>
         <ProfileTop currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
-        <PrivateGallery />
+        <PrivateGallery currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
         <ProgressTracker />
         <Subscription />
         <Docs />
