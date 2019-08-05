@@ -60,9 +60,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <div className="mandala-position">
           {this.showMandalaFourTimes()}
-        </div>
         <Hero />
         <div className="after-hero">
           {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}

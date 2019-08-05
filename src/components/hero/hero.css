@@ -1,11 +1,13 @@
 .hero {
   background-image: url("/images/hero.jpeg");
   background-size: 115%;
-  background-position: 10px -100px;
+  background-repeat: no-repeat;
+  background-position: 0 -100px;
   position: absolute;
   top: 0;
   width: 100vw;
   min-height: 115vh;
+  min-width: 950px;
   z-index: -3;
 }
 

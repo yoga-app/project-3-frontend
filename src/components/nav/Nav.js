@@ -28,7 +28,7 @@ function Nav(props){
     <nav>
       <div className="logo">
         <img className="kukee-img" src="/images/logo.svg" alt="logo" />
-        <p className="kukee">Kukee Bliss Yoga</p>
+        <p className="kukee">Kukee <span>Bliss Yoga</span></p>
       </div>
       <div className="nav-links">
         <NavLink to="/" className="nav-link">home</NavLink>
