@@ -30,7 +30,6 @@ class ProfileTop extends Component {
       firstName:this.state.firstName,
       lastName: this.state.lastName,
       username: this.state.username,
-      //handle image upload and change
     })
     .then((freshUser)=> {
       console.log(freshUser);
@@ -105,7 +104,7 @@ class ProfileTop extends Component {
     <div className="user-info-wrapper">
       <h4 className="inline">{this.props.currentUser.firstName} </h4> 
       <h4 className="inline">{this.props.currentUser.lastName}</h4>
-      <h4>@ {this.props.currentUser.username}</h4>
+      <h4>Email: {this.props.currentUser.username}</h4>
     </div>
     <div className="edit-button-wrapper">
     <form onSubmit={this.toggleEditForm}>
