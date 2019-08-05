@@ -28,8 +28,21 @@ class Classes extends Component {
           <p className="off">Get 20% OFF one class for every friend you bring!<br />Earn a $5 Credit after 15 visits!</p>
         </div>
         <div className="schedule">
-        <h4>Schedule</h4>
-        <p>[schedule goes here]</p>
+          <h4>Schedule</h4>
+          <ul>
+            <li>
+              <p>Wednesdays</p>
+              <p>Restorative Yoga 6:45pm-7:30pm</p>
+            </li>
+            <li>
+              <p>Fridays</p>
+              <p>Chair Yoga 9:30am-10:15am</p>
+            </li>
+            <li>
+              <p>Sundays</p>
+              <p>Power Yoga 7:00pm-7:45pm</p>
+            </li>
+          </ul>
         </div>
       </div>
     );

@@ -39,3 +39,7 @@
 .schedule {
   text-align: right;
 }
+
+.schedule ul {
+  width: 400px;
+}
