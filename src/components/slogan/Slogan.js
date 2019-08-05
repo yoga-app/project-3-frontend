@@ -4,8 +4,8 @@ import './slogan.css';
 class Slogan extends Component {
   render() {
     return (
-      <div className="temporary">
-        <small>[this is the <b>slogan component</b>]</small>
+      <div className="slogan">
+        <h1>LIVE YOUR HAPPINESS</h1>
       </div>
     );
   }

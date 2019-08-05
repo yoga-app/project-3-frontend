@@ -16,7 +16,7 @@ class Testimonial extends Component {
           <div className="testimonial-picture-div">
             <img className="testimonial-picture" src={this.props.picture} alt="yogi" />
           </div>
-          <p className="author-info"><span className="author-class">{this.props.author}</span> attended to our <span className="author-class">{this.props.attended}</span> class</p>
+          <p className="author-info"><span className="author-class">{this.props.author}</span> attended our <span className="author-class">{this.props.attended}</span> class</p>
         </div>
       </div>
     );
