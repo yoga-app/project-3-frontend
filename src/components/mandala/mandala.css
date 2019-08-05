@@ -1,7 +1,8 @@
 .mandala *:after, .mandala *:before
 	{display:block;position:absolute;content:""}
 
-.mandala{background:#00000000}
+.mandala{background:#00000000;
+opacity: .2}
 .mandala div{display:block;position:absolute}
 
 [class*="container"]{

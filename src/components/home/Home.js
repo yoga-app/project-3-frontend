@@ -49,9 +49,9 @@ class Home extends Component {
     })
   }
 
-  showMandalaFourTimes() {
+  showMandala(opacity) {
     let result = [];
-    for(let i=0;i < 4; i++){
+    for(let i=0;i < opacity; i++){
       result.push(<Mandala key={i}/>)
     }
     return <div>{result}</div>
@@ -60,7 +60,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Hero showMandala={this.showMandalaFourTimes}/>
+        <Hero showMandala={this.showMandala}/>
           {this.state.ready && <Quote text={this.state.quote.text} author={this.state.quote.author}/>}
           <section className="testimonial-cards">
             {this.state.ready && this.showTestimonials()}
