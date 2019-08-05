@@ -12,8 +12,8 @@ class AddGalleryItem extends Component {
       picture: null,
       video: '',
       category: ''
-    }
-  }
+    };
+  };
   
 onFormSubmit = (e) => {
   e.preventDefault();
