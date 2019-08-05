@@ -5,7 +5,13 @@ class Hero extends Component {
   render() {
     return (
       <div className="hero">
-        <section className="mandala-section">
+        <section style={{position: 'absolute', top: '-60px',right: '10px'}}>
+          {this.props.showMandala()}
+        </section>
+        <section style={{position: 'absolute', top: '280px',right: '33px'}}>
+          {this.props.showMandala()}
+        </section>
+        <section style={{position: 'absolute', top: '90px',right: '320px'}}>
           {this.props.showMandala()}
         </section>
         {/* <small>[hero picture goes here]</small><br /> */}
