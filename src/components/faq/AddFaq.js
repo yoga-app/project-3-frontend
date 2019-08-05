@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Button from '../button/Button';
+import './faq.css';
 
 class AddFaq extends Component {
   constructor(props) {
@@ -30,13 +32,16 @@ class AddFaq extends Component {
   render() {
     return (
       <div className="add-faq-wrapper">
-        <h3>Add new FAQ</h3>
-        <form className="add-faq-form" onSubmit={this.onFormSubmit}>
-          <legend htmlFor="question">Add a question </legend>
-          <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
-          <legend htmlFor="answer">Add a answer </legend>
-          <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
-          <button>Save </button>
+        <form className="form-login add-faq-form" onSubmit={this.onFormSubmit}>
+          <div>
+            <label htmlFor="question">Add a question: </label>
+            <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
+          </div>
+          <div>
+            <label htmlFor="answer">Add an answer: </label>
+            <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
+          </div>
+          <Button class="login-signup" text="SUBMIT"/>
         </form>
       </div>
     );

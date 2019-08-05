@@ -3,7 +3,7 @@
   background-image: url("/images/hero.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 115vh;
   min-width: 950px;
   z-index: -3;

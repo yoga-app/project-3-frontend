@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './oneqanda.css';
 
 class OneQandA extends Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class OneQandA extends Component {
       <h3>{this.props.question}</h3>
         <p>{this.props.answer}</p>
         {this.props.theUser && this.props.theUser.isAdmin &&
-        <button onClick={this.toggleEditForm}>Edit this item</button>}
+        <button className="login-signup small-button" onClick={this.toggleEditForm}>EDIT</button>}
       </div>
     )
   }
@@ -53,9 +54,9 @@ class OneQandA extends Component {
           <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
           <legend htmlFor="answer">Updated answer</legend>
           <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
-          <button>Save changes</button>
+          <button className="login-signup small-button">SAVE</button>
         </form>
-        <button onClick={this.cancel}>Cancel changes</button>
+        <button className="login-signup small-button" onClick={this.cancel}>CANCEL</button>
       </div>
     )
   }
@@ -81,7 +82,7 @@ cancel = ()=> {
         {this.state.isEditing ? this.showEditForm() : this.showQandA()}
 
         {this.props.theUser && this.props.theUser.isAdmin &&
-        <button onClick={this.deleteQandA}>Delete this QandA</button>}
+        <button className="login-signup small-button" onClick={this.deleteQandA}>DELETE</button>}
       </div>
     );
   }

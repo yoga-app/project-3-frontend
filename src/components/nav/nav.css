@@ -17,7 +17,7 @@
 nav {
   z-index: 1;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,11 +44,10 @@ nav {
 .kukee {
   text-shadow: 5px 5px 8px #f5e7dc;
   position: relative;
-  color: #413B3D;
+  color: #4f8280;
   margin: 0;
-  margin-left: -6.9px;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   word-spacing: -0.25rem;
   letter-spacing: -0.09rem;
 }
@@ -59,7 +58,7 @@ nav {
 
 
 .kukee-img {
-  width: 52px;
+  width: 61px;
 }
 
 .profile-pic {
