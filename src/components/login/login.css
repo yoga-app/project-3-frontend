@@ -4,15 +4,16 @@
 }
 
 .form-login {
-  margin: 30px;
+  position: absolute;
+  left: 3vw;
+  top: 250px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
   justify-content: space-between;
   width: 500px;
   height: 155px;
-  background-color: #F1CBAA;
+  background-color: rgba(241, 203, 170, 0.89);
   padding: 30px;
 }
 
@@ -25,7 +26,7 @@
   margin-left: 5px;
   line-height: 2rem;
   border: none;
-  background-color: rgb(224, 187, 155);
+  background-color: #eee1d66b;
   border-bottom: 1px solid #413B3D;
 }
 
