@@ -8,17 +8,17 @@ class GalleryItem extends Component {
     super(props);
    
     this.state ={
-      title: '',
-      text: '',
+      title: `${this.props.title}`,
+      text: `${this.props.text}`,
       picture: null,
-      video: '',
+      video: `${this.props.link}`,
       category: '',
       isEditing: false,
       refresh: false,
       liked: false,
     }
   }
-
+  
     
 submitEditForm = (e) => {
   e.preventDefault();
@@ -109,6 +109,7 @@ addLike = () => {
     itemID: this.props.id
   })
   .then(response => {
+    this.props.updateGallery()
     console.log(response);
   })
   .catch(err=> {
@@ -123,6 +124,7 @@ removeLike = () => {
   })
   .then((response)=> {
     console.log(response);
+    
     this.setState({liked: false})
   })
   .catch(err=> {
@@ -134,6 +136,7 @@ removeLike = () => {
     itemID: this.props.id
   })
   .then(response => {
+    this.props.updateGallery()
     console.log(response);
   })
   .catch(err=> {
