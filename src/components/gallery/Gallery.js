@@ -41,6 +41,7 @@ class Gallery extends Component {
         categoryArray={eachI.category}
         updateGallery={this.updateGallery}
         theUser={this.props.theUser}
+        likedByArr={eachI.likedBy}
         />
       )
     })
