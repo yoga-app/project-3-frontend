@@ -29,16 +29,28 @@ nav {
 }
 
 .logo {
-  padding-left: 30px;
+  margin: 10px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: radial-gradient(#f5e7dc 20%, #00000000 60%);
+  border-radius: 50%;
+  height: 90px;
 }
 
 .kukee {
+  text-shadow: 2px 2px #f5e7dc, -2px -2px #f5e7dc;
+  position: relative;
+  color: #427c7b;
+  top: -20px;
   margin: 0;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  word-spacing: -.4rem;
+}
+
+.kukee span {
+  word-spacing: -.7rem;
 }
 
 
