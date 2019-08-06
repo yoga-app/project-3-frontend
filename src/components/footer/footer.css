@@ -52,6 +52,16 @@
   }
 }
 
+.social-icon {
+  width: 30px;
+}
+
+.social-text {
+ position: relative;
+ bottom: 5px;
+ left: 3px;
+}
+
 /* .footer-right {
 
 } */

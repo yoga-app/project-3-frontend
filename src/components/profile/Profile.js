@@ -7,6 +7,7 @@ import Subscription from '../subscription/Subscription.js';
 import Docs from '../docs/Docs.js';
 
 class Profile extends Component {
+
   render() {
     return (
       <div className="profile1">
