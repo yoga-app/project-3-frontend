@@ -6,6 +6,7 @@
   display: inline-block;
   width: 470px;
 }
+
 .gallery-category {
   border: 1px solid #999;
   border-radius: 4px;
@@ -16,6 +17,7 @@
   margin: 0 5px;
   font-size: 14px;
 }
+
 .add-gallery-pic-or-vid {
   border: 1px solid olivedrab;
   border-radius: 4px;
@@ -30,4 +32,31 @@
 
 .gallery-image {
   max-width: 400px;
+}
+
+.toggle-image-video-buttons > *:focus {
+  outline: none;
+}
+
+.form-add-video-image {
+  position: static;
+  width: 700px;
+}
+
+.image-video-button {
+  position: absolute;
+  top: 255px;
+  color: #413B3D;
+  background-color: #00000000;
+  border: 2px solid #413B3D;
+}
+
+.image-video-button:hover {
+  background-color: #413B3D;
+  color: #ecdbcb;
+}
+
+.form-add-video-image input {
+  width: 485px;
+  font-size: 1rem;
 }

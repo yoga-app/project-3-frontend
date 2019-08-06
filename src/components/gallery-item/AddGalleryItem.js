@@ -11,7 +11,8 @@ class AddGalleryItem extends Component {
       text: '',
       picture: null,
       video: '',
-      category: ''
+      category: '',
+      videoInput: true,
     };
   };
   
@@ -45,30 +46,54 @@ onPicSelect = (e) => {
   this.setState({picture:e.target.files[0]})
 }
 
+addVideo = () => {
+  return <div>
+           <label htmlFor="video">link from YouTube:</label>
+           <input name="video" id="video" onChange={this.onInputChange} value={this.state.video}/>
+         </div>
+}
+
+addImage = () => {
+  return <div>
+           <label htmlFor="picture">picture:</label>
+           <input name="picture" id="picture" type="file" onChange={this.onPicSelect} />
+         </div>
+}
+
+
+toggleImageVideo = (e, thisAddForm) =>{
+  e.preventDefault();
+  if(thisAddForm === "image"){
+    this.setState({videoInput: false})
+  } else {
+    this.setState({videoInput: true})
+  }  
+}
+
 
   render() {
     return (
       
-        <div className="gallery-card" >
-        <h3>Add New Gallery Item</h3>
-          <form onSubmit={this.onFormSubmit}>
-            <legend htmlFor="title">Enter title </legend>
+      <div className="add-gallery-item">
+        <form className="form-add-video-image" onSubmit={this.onFormSubmit}>
+          <div>
+            <label htmlFor="title">title:</label>
             <input name="title" id="title" onChange={this.onInputChange} value={this.state.title}/>
-            <div className="add-gallery-pic-or-vid">
-              <p>Video or Picture. One or another, not both. If you provide a video, the picture will not be shown.</p>
-              <p>If you don't provide niether picture nor video - default picture will be assigned.</p>
-            <legend htmlFor="picture">Pic a pic</legend>
-            <input name="picture" id="picture" type="file" onChange={this.onPicSelect} />
-            <legend htmlFor="video">Enter a link to youtube video </legend>
-            <input name="video" id="video" onChange={this.onInputChange} value={this.state.video}/>
-            </div>
-            <legend htmlFor="category">Enter the list of comma-separated categories </legend>
+          </div>
+          
+          {this.state.videoInput ? this.addVideo() : this.addImage()}
+          {this.state.videoInput ? <button className="image-video-button login-signup small-button" onClick = {(e)=> this.toggleImageVideo(e,'image')}>OR CLICK HERE TO ADD AN IMAGE</button> : <button className="image-video-button login-signup small-button" onClick = {(e)=> this.toggleImageVideo(e,'video')}>OR CLICK HERE TO ADD A VIDEO</button>}
+          <div>
+            <label htmlFor="category">categories: </label>
             <input name="category" id="category" onChange={this.onInputChange} value={this.state.category}/>
-            <legend htmlFor="text">Enter description </legend>
+          </div>
+          <div>
+            <label htmlFor="text">description: </label>
             <input name="text" id="text" onChange={this.onInputChange} value={this.state.text}/>
-            <br />
-            <Button text="SAVE" className="add-gallery-item-button"/>
-          </form>
+          </div>
+           {/* <br /> */}
+          <Button text="SUBMIT" class="login-signup" />
+        </form>
       </div>
       
     );

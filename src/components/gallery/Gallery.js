@@ -51,9 +51,11 @@ class Gallery extends Component {
  
  
     return (
-      <div className="temporary gallery">
+      <div className="gallery">
+        <div>
+          {this.state.ready ? this.showGalItems() : <div>Loading ... </div>}
+        </div>
         {this.props.theUser && this.props.theUser.isAdmin && <AddGalleryItem updateGallery={this.updateGallery}/>}
-        {this.state.ready ? this.showGalItems() : <div>Loading ... </div>}
       </div>
     );
 
