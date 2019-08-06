@@ -15,6 +15,7 @@ import Classes from './components/classes/Classes';
 import Newsletter from './components/newsletter/Newsletter';
 import Gallery from './components/gallery/Gallery';
 import Faq from './components/faq/Faq';
+import PasswordRecovery from './components/password-recovery/PasswordRecovery';
 // import Mandala from './components/mandala/Mandala';
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
       ready: false,
       signupShowing: false,
       loginShowing: false,
+      forgotPasswordShowing: false,
    };
 
    this.service = new AuthService();
@@ -162,6 +164,11 @@ class App extends React.Component {
               {...props} 
               theUser = {this.state.currentlyLoggedIn}
               getCurrentUser = {this.getCurrentlyLoggedInUser}/>}/>
+
+          <Route exact path="/forgot-password-email" component={PasswordRecovery}/>
+              
+          <Route exact path="/forgot-password-update/:id" render ={(props)=> 
+            <PasswordRecovery {...props} forReset />}/>
 
         </Switch>
         {/* <Main /> */}

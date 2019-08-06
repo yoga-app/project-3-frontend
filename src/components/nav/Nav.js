@@ -33,7 +33,7 @@ function Nav(props){
         </div>
       </NavLink>
       <div className="nav-links">
-        <NavLink to="/" className="nav-link">home</NavLink>
+        <NavLink exact to="/" activeClassName="nav-link-active" className="nav-link">home</NavLink>
 
         {!props.theUser && 
           <span>
@@ -42,11 +42,11 @@ function Nav(props){
           </span>
         }
 
-        <NavLink to="/classes" className="nav-link">classes</NavLink>
+        <NavLink exact to="/classes" activeClassName="nav-link-active" className="nav-link">classes</NavLink>
 
-        <NavLink to="/aboutus" className="nav-link">about us</NavLink>
+        <NavLink exact to="/aboutus" activeClassName="nav-link-active" className="nav-link">about us</NavLink>
 
-        <NavLink to="/gallery" className="nav-link">gallery</NavLink>
+        <NavLink exact to="/gallery" activeClassName="nav-link-active" className="nav-link">gallery</NavLink>
 
         {/* <NavLink to="/newsletter" className="nav-link">newsletter</NavLink> */}
 
@@ -57,7 +57,7 @@ function Nav(props){
         }
 
         {props.theUser && 
-          <NavLink to="/profile" className="nav-link profile">
+          <NavLink to="/profile" activeClassName="nav-link-active" className="nav-link profile">
             <img className="profile-pic" alt="profile" src={props.theUser.picture} />
             <div>
               {props.theUser.firstName} {props.theUser.lastName}

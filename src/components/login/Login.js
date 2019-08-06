@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../../services/AuthServices.js';
+import {Link} from 'react-router-dom';
 import Button from '../button/Button.js';
 import './login.css';
 
@@ -47,6 +48,7 @@ class Login extends Component {
           />
         </div>
         <Button text="LOGIN" class="login-signup"/>
+        <Link to="/forgot-password-email" > Forgot Password</Link>
       </form>
     )
   }

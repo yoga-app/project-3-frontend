@@ -4,6 +4,10 @@
   display: flex;
 }
 
+.nav-link-active{
+  text-decoration: underline;
+}
+
 .nav-button {
   background-color: #00000000;
   border: none;
