@@ -20,7 +20,7 @@
   transition: all 1s;
 }
 
-.slogan h1:hover {
+.slogan:hover h1 {
   text-shadow: 1px 1px 30px #413B3D, -1px -1px 30px #413B3D;
   letter-spacing: 1.3rem;
   transition: all 1s;
