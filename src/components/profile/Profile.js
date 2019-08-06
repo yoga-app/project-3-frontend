@@ -7,12 +7,14 @@ import Subscription from '../subscription/Subscription.js';
 import Docs from '../docs/Docs.js';
 
 class Profile extends Component {
+
   render() {
     return (
       <div>
         <ProfileTop currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
         <PrivateGallery currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
-        <ProgressTracker />
+        {this.props.theUser && this.props.theUser.isAdmin &&
+           <ProgressTracker currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>}
         <Subscription />
         <Docs />
       </div>

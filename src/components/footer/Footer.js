@@ -7,9 +7,8 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer-left">
-          <p> Mission statement.</p>
-          <p>Why do I do what I do. </p>
-          <p>What is in it for you</p> 
+          <p> Mission statement</p>
+          <p>Kukee Bliss Yoga is on a mission to make yoga available to everyone! No more excuses! </p>
         </div>
         <div className="footer-middle">
           <ul>
@@ -19,7 +18,11 @@ class Footer extends Component {
           </ul>
         </div>
         <div className="footer-right">
-          Connect with us by clicking on this handy social icons
+          <a href="https://www.facebook.com/kukeeblissyoga/" target="_blank" rel="noopener noreferrer"
+          className="social-link">
+          <img src="/images/facebook.svg" alt="" className="social-icon"/>
+          <span className="social-text">Follow us on Facebook</span>
+          </a>
         </div>
       </div>
     );
