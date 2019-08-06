@@ -59,27 +59,61 @@ toggleEditForm = (e) => {
   this.setState({isEditing: !this.state.isEditing})
 }
 
-cancel = ()=> {
+cancel = (e)=> {
+  e.preventDefault();
   this.setState({isEditing: false});
+}
+
+newVideo = () => {
+  return <div>
+           <label htmlFor="video">new video:</label>
+           <input name="video" id="video" onChange={this.onInputChange} value={this.state.video} />
+         </div>
+}
+
+newImage = () => {
+  return <div>
+           <label htmlFor="picture">new picture:</label>
+           <input name="picture" id="picture" type="file" onChange={this.onPicSelect} />
+         </div>
+}
+
+toggleImageVideo = (e, thisAddForm) =>{
+  e.preventDefault();
+  if(thisAddForm === "image"){
+    this.setState({video: ''})
+  } else {
+    this.setState({video: 'no video selected'})
+  }  
 }
 
 showEditFields() {
 return (
-  <div className="gallery-card" >
-  <form onSubmit={this.submitEditForm}>
-    <legend htmlFor="title">New title</legend>
-    <input name="title" id="title" onChange={this.onInputChange} value={this.state.title} />
-    <legend htmlFor="text">New description</legend>
-    <input name="text" id="text" onChange={this.onInputChange} value={this.state.text} />
-    <legend htmlFor="picture">Select new picture</legend>
-    <input name="picture" id="picture" type="file" onChange={this.onPicSelect} />
-    <legend htmlFor="video">Link to  new youtube video</legend>
-    <input name="video" id="video" onChange={this.onInputChange} value={this.state.video} />
-    <legend htmlFor="title">New categories</legend>
-    <input name="category" onChange={this.onInputChange} value={this.state.category} />
-    <button>Update </button>
-  </form>
-    <button className="cancel-update-gallery" onClick={this.cancel}>Cancel Editing</button>
+
+  <div className="add-gallery-item edit-gallery-item">
+    <form className="form-add-video-image" onSubmit={this.submitEditForm}>
+      <div>
+        <label htmlFor="title">new title:</label>
+        <input name="title" id="title" onChange={this.onInputChange} value={this.state.title} />
+      </div>
+
+      {this.state.video ? this.newVideo() : this.newImage()}
+      {this.state.video ? <button className="image-video-button login-signup small-button" onClick = {(e)=> this.toggleImageVideo(e,'image')}>OR CLICK HERE TO SWAP IT FOR AN IMAGE</button> : <button className="image-video-button login-signup small-button" onClick = {(e)=> this.toggleImageVideo(e,'video')}>OR CLICK HERE TO SWAP IT FOR A VIDEO</button>}
+
+      <div>
+        <label htmlFor="title">new categories:</label>
+        <input name="category" onChange={this.onInputChange} value={this.state.category} />
+      </div>
+
+      <div>
+        <label htmlFor="text">new description:</label>
+        <input name="text" id="text" onChange={this.onInputChange} value={this.state.text} />
+      </div>
+      <div>
+        <Button text="UPDATE" class="login-signup" />
+        <button className="cancel-update-gallery login-signup small-button" onClick={(e)=>{this.cancel(e)}}>CANCEL</button>
+      </div>
+    </form>
   </div>
 )
 }
@@ -148,45 +182,45 @@ showInfo() {
   return (<div className="gallery-card" >
   <h3>{this.props.title}</h3>
   
-  {this.props.theUser && (this.state.liked ? 
-  <div> 
-    <p>Liked!</p>
-  <button onClick={this.removeLike}>Remove like</button>
-  </div>
-    :
-    <div> 
-    <button onClick={this.addLike}>Like it!</button>
-    </div>)
-  }
 
   {this.props.link ? 
   
-    <iframe title="video"
-    //change this size for youtube embed video. Keep 16:9 ratio
-    width="448" height="252" 
-    src={this.props.link}
-    frameBorder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowFullScreen></iframe>
-    
+  <iframe className="gallery-video" title="video"
+  //change this size for youtube embed video. Keep 16:9 ratio
+  width="448" height="252" 
+  src={this.props.link}
+  frameBorder="0" 
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+  allowFullScreen></iframe>
+  
+  :
+  <img src={this.props.picture} className="gallery-image" alt="gallery item"/>
+  }
+  {this.props.theUser && (this.state.liked ? 
+    <div className="like-button-div">
+      <button className="like-button liked" onClick={this.removeLike}>♥</button>
+    </div>
     :
-    <img src={this.props.picture} className="gallery-image" alt="gallery item"/>
+    <div className="like-button-div"> 
+      <button className="like-button not-liked" onClick={this.addLike}>♥</button>
+    </div>)
   }
   <p>{this.props.text}</p>
-
-  {this.props.theUser && this.props.theUser.isAdmin && 
-  <form onSubmit={this.deleteGalItem}>
-  <Button text="Delete this item"
-  class="delete-gallery-item-button" 
-  />
-  </form>}
-  {this.props.theUser && this.props.theUser.isAdmin && 
-  <form onSubmit={this.toggleEditForm}>
-    <Button text="Edit this item" class="edit-gallery-item-button"/>
+  <div className="categories">
+    {this.props.categoryArray && this.showCategory()}
+  </div>
+  <div className="delete-edit-buttons-gallery">
+    {this.props.theUser && this.props.theUser.isAdmin && 
+    <form onSubmit={this.deleteGalItem}>
+      <Button text="DELETE"
+      class="delete-gallery-item-button login-signup small-button" 
+      />
     </form>}
-    <div className="categories">
-      {this.props.categoryArray && this.showCategory()}
-    </div>
+    {this.props.theUser && this.props.theUser.isAdmin && 
+    <form onSubmit={this.toggleEditForm}>
+      <Button text="EDIT" class="edit-gallery-item-button login-signup small-button"/>
+    </form>}
+  </div>
 
 </div>
   )
