@@ -51,11 +51,15 @@ class Gallery extends Component {
  
  
     return (
-      <div className="gallery">
-        <div>
-          {this.state.ready ? this.showGalItems() : <div>Loading ... </div>}
+      <div>
+        <div className={this.props.theUser && this.props.theUser.isAdmin ? "gallery" : "gallery-flex gallery"}>
+
+          <div>
+            {this.state.ready ? this.showGalItems() : <div>Loading ... </div>}
+          </div>
+        
+          {this.props.theUser && this.props.theUser.isAdmin && <AddGalleryItem updateGallery={this.updateGallery}/>}
         </div>
-        {this.props.theUser && this.props.theUser.isAdmin && <AddGalleryItem updateGallery={this.updateGallery}/>}
       </div>
     );
 
