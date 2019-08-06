@@ -184,7 +184,9 @@ showInfo() {
   <form onSubmit={this.toggleEditForm}>
     <Button text="Edit this item" class="edit-gallery-item-button"/>
     </form>}
-  {this.props.categoryArray && this.showCategory()}
+    <div className="categories">
+      {this.props.categoryArray && this.showCategory()}
+    </div>
 
 </div>
   )

@@ -1,20 +1,22 @@
 .gallery-card {
-  border: 1px solid orange;
+  background-color: #ad692ab6;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 470px;
 }
 
 .gallery-category {
-  border: 1px solid #999;
   border-radius: 4px;
   display: inline-block;
-  padding: 3px;
-  color: white;
-  background-color: #999;
-  margin: 0 5px;
+  padding: .3rem .5rem;
+  color: #413B3D;
+  font-weight: 400;
+  background-color: #ecdbcb;
+  margin: 3px;
   font-size: 14px;
 }
 

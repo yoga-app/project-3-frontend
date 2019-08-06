@@ -91,7 +91,6 @@ toggleImageVideo = (e, thisAddForm) =>{
             <label htmlFor="text">description: </label>
             <input name="text" id="text" onChange={this.onInputChange} value={this.state.text}/>
           </div>
-           {/* <br /> */}
           <Button text="SUBMIT" class="login-signup" />
         </form>
       </div>
