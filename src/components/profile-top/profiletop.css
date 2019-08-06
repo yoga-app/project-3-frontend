@@ -6,18 +6,22 @@
   align-self: center;
   border: 5px solid #FDF4F3;
 }
+
 .user-pic-round:hover {
   border: 5px solid #DF917D;
   opacity: 0.5;
 }
+
 .profile-bg-pic {
   width: 100%
 }
+
 .user-info {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
 .user-pic-wrapper {
   position: relative;
   bottom: 90px;
@@ -26,12 +30,19 @@
 .inline {
   display: inline;
 }
+
 .visible {
   visibility: visible;
 }
+
 .invisible {
   visibility: hidden;
 }
+
 .delete {
   background-color: red !important;
+}
+
+.wrapper {
+  padding-top: 100px;
 }
