@@ -34,8 +34,8 @@ class AddFaq extends Component {
       <div className="add-faq-wrapper">
         <form className="form-login add-faq-form" onSubmit={this.onFormSubmit}>
           <div>
-            <label htmlFor="question">Add a question: </label>
-            <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
+            <label htmlFor="add-question">Add a question: </label>
+            <input name="question" id="add-question" onChange={this.onInputChange} value={this.state.question} />
           </div>
           <div>
             <label htmlFor="answer">Add an answer: </label>

@@ -11,8 +11,6 @@ class OneQandA extends Component {
       isEditing: false,
     }
   }
-  
-
 
   deleteQandA = () => {
     axios.post('http://localhost:5000/faq/deletebyid/'+this.props.id)
@@ -26,7 +24,7 @@ class OneQandA extends Component {
 
   showQandA() {
     return (
-      <div>
+      <div className="oneqa">
       <h3>{this.props.question}</h3>
         <p>{this.props.answer}</p>
         {this.props.theUser && this.props.theUser.isAdmin &&
@@ -46,17 +44,22 @@ class OneQandA extends Component {
       console.log(err);
     })
   }
+
+
+
   showEditForm() {
     return (
       <div className="faq-edit-form-wrapper">
-        <form className="faq-edit-form" onSubmit={this.onFormSubmit}>
+        <form id="faq-edit-form" className="faq-edit-form" onSubmit={this.onFormSubmit}>
           {/* <legend htmlFor="question">Updated question</legend> */}
           <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
           {/* <legend htmlFor="answer">Updated answer</legend> */}
-          <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
-          <button className="login-signup small-button">SAVE</button>
+          <textarea name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
+          <div className="edit-buttons">
+            <button className="login-signup small-button">SAVE</button>
+            <button className="login-signup small-button" onClick={this.cancel}>CANCEL</button>
+          </div>
         </form>
-        <button className="login-signup small-button" onClick={this.cancel}>CANCEL</button>
       </div>
     )
   }
@@ -78,7 +81,7 @@ cancel = ()=> {
 
   render() {
     return (
-      <div>
+      <div className="eachqa">
         {this.state.isEditing ? this.showEditForm() : this.showQandA()}
 
         {this.props.theUser && this.props.theUser.isAdmin &&
