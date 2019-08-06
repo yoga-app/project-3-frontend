@@ -50,9 +50,9 @@ class OneQandA extends Component {
     return (
       <div className="faq-edit-form-wrapper">
         <form className="faq-edit-form" onSubmit={this.onFormSubmit}>
-          <legend htmlFor="question">Updated question</legend>
+          {/* <legend htmlFor="question">Updated question</legend> */}
           <input name="question" id="question" onChange={this.onInputChange} value={this.state.question} />
-          <legend htmlFor="answer">Updated answer</legend>
+          {/* <legend htmlFor="answer">Updated answer</legend> */}
           <input name="answer" id="answer" onChange={this.onInputChange} value={this.state.answer} />
           <button className="login-signup small-button">SAVE</button>
         </form>
