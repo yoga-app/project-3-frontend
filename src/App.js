@@ -142,7 +142,12 @@ class App extends React.Component {
 
           <Route exact path="/aboutus" component={AboutUs}/>
           <Route exact path="/" component={Main}/>
-          <Route exact path="/classes" component={Classes}/>
+          <Route exact path="/classes" render ={(props)=> 
+            <Classes
+              {...props} 
+              theUser = {this.state.currentlyLoggedIn}
+              getCurrentUser = {this.getCurrentlyLoggedInUser}/>}/>
+              
           <Route exact path="/newsletter" component={Newsletter}/>
 
           <Route exact path="/gallery" render ={(props)=> 
