@@ -11,7 +11,11 @@
   font-size: 1.2rem;
   font-weight: 100;
   cursor: pointer;
-  color: #413B3D;
+  color: #413B3D;  
+}
+
+.nav-button:focus {
+  outline: none;
 }
 
 nav {

@@ -9,7 +9,7 @@ import Docs from '../docs/Docs.js';
 class Profile extends Component {
   render() {
     return (
-      <div>
+      <div className="profile1">
         <ProfileTop currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
         <PrivateGallery currentUser={this.props.theUser} getCurrentUser = {this.props.getCurrentUser}/>
         <ProgressTracker />

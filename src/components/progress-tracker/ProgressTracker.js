@@ -6,6 +6,7 @@ class ProgressTracker extends Component {
     return (
       <div className="temporary">
         <small>[this is the <b>progress tracker component</b>]</small>
+        <small>pending status info for admin</small>
       </div>
     );
   }
