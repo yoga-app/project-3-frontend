@@ -122,7 +122,7 @@ class ProgressTracker extends Component {
 
   render() {
     return (
-      <div className="temporary">
+      <div className="tracker">
         <small>[this is the <b>connected </b>progress tracker component]</small>
         <small>pending status info for admin</small>
         <p>
