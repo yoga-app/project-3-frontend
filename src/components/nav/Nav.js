@@ -26,14 +26,17 @@ function Nav(props){
     // newsletter feed
 
     <nav>
-      <NavLink className="logo-link" to="/">
+      <NavLink className="logo-link" to="/" onClick={props.hideLoginAndSignupForms}>
         <div className="logo">
           <img className="kukee-img" src="/images/logo.svg" alt="logo" />
           <p className="kukee">Kukee <span>Bliss Yoga</span></p>
         </div>
       </NavLink>
       <div className="nav-links">
-        <NavLink exact to="/" activeClassName="nav-link-active" className="nav-link">home</NavLink>
+        <NavLink exact to="/" 
+        activeClassName="nav-link-active" 
+        className="nav-link"
+        onClick={props.hideLoginAndSignupForms}> home</NavLink>
 
         {!props.theUser && 
           <span>
@@ -42,11 +45,20 @@ function Nav(props){
           </span>
         }
 
-        <NavLink exact to="/classes" activeClassName="nav-link-active" className="nav-link">classes</NavLink>
+        <NavLink exact to="/classes" activeClassName="nav-link-active" 
+        className="nav-link"
+        onClick={props.hideLoginAndSignupForms}
+        >classes</NavLink>
 
-        <NavLink exact to="/aboutus" activeClassName="nav-link-active" className="nav-link">about us</NavLink>
+        <NavLink exact to="/aboutus" activeClassName="nav-link-active" 
+        className="nav-link"
+        onClick={props.hideLoginAndSignupForms}
+        >about us</NavLink>
 
-        <NavLink exact to="/gallery" activeClassName="nav-link-active" className="nav-link">gallery</NavLink>
+        <NavLink exact to="/gallery" activeClassName="nav-link-active" 
+        className="nav-link"
+        onClick={props.hideLoginAndSignupForms}
+        >gallery</NavLink>
 
         {/* <NavLink to="/newsletter" className="nav-link">newsletter</NavLink> */}
 
@@ -57,7 +69,9 @@ function Nav(props){
         }
 
         {props.theUser && 
-          <NavLink to="/profile" activeClassName="nav-link-active" className="nav-link profile">
+          <NavLink to="/profile" activeClassName="nav-link-active" 
+          className="nav-link profile"
+          >
             <img className="profile-pic" alt="profile" src={props.theUser.picture} />
             <div>
               {props.theUser.firstName} {props.theUser.lastName}

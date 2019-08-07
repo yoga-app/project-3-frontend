@@ -28,8 +28,6 @@ class Login extends Component {
 
   }
 
-
-
   render(){
     return(
       <form className="form-login" onSubmit = {this.tryToLogin}>
@@ -48,7 +46,7 @@ class Login extends Component {
           />
         </div>
         <Button text="LOGIN" class="login-signup"/>
-        <Link to="/forgot-password-email" > Forgot Password</Link>
+        <Link to="/forgot-password-email" onClick={()=>{this.props.toggleForm('login')}}> Forgot Password</Link>
       </form>
     )
   }
