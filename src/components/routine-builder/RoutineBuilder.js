@@ -13,7 +13,7 @@ class RoutineBuilder extends Component {
   showAllAsanas() {
     return this.props.asanas.map(eachA => {
       return (
-        <div key={eachA._id} className="each-asana-builder-wrapper">
+        <div key={eachA._id} className="each-asana-builder-wrapper" onClick={()=>{this.addToRoutine(eachA._id)}}>
           <img src={eachA.img_url} alt="asana" className="daily-builder-asana"/>
           <p>{eachA.english_name}</p>
           <p>{eachA.sanskrit_name}</p>
@@ -26,14 +26,22 @@ class RoutineBuilder extends Component {
     this.setState({description: e.target.value})
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     axios.post('http://localhost:5000/api/auth/update-daily-routine-for-all/', this.state)
     .then(response=> {
-      console.log(response.date);
+      this.props.getCurrentUser();
+      this.setState({routine: [], description: ''})
     })
     .catch(err=> {
       console.log(err);
     })
+  }
+
+  addToRoutine = (asanaId) => {
+    let temp = this.state.routine;
+    temp.push(asanaId)
+    this.setState({routine: temp})
   }
 
 
