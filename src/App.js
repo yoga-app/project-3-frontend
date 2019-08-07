@@ -71,6 +71,13 @@ class App extends React.Component {
     
   }
 
+  hideLoginAndSignupForms = () => {
+    this.setState({ 
+      signupShowing: false,
+      loginShowing: false
+    })
+  }
+
 
 
   componentDidMount() {
@@ -92,6 +99,7 @@ class App extends React.Component {
           pleaseLogOut = {()=> this.service.logout()}
           toggleForm = {this.toggleForm}
           getUser = {this.getCurrentlyLoggedInUser}
+          hideLoginAndSignupForms={this.hideLoginAndSignupForms}
         />
 
         {this.state.signupShowing && 
