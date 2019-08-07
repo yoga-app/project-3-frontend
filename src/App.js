@@ -2,14 +2,12 @@ import React from 'react';
 import './App.css';
 import {Route, Switch, Redirect} from 'react-router-dom';
 import Main from './components/main/Main';
-import Asana from './components/asana/Asana';
 import Signup from './components/signup/Signup';
 import Login from './components/login/Login';
 import Profile from './components/profile/Profile';
 import AuthService from './services/AuthServices';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
-import axios from 'axios';
 import AboutUs from './components/about-us/AboutUs';
 import Classes from './components/classes/Classes';
 import Newsletter from './components/newsletter/Newsletter';
@@ -23,7 +21,6 @@ class App extends React.Component {
     super(props)
     this.state = {
       currentlyLoggedIn: null,
-      asanas: [],
       ready: false,
       signupShowing: false,
       loginShowing: false,
@@ -33,16 +30,6 @@ class App extends React.Component {
    this.service = new AuthService();
   }
 
-  getAllAsanas = () => {
-    axios.get(`http://localhost:5000/asanas`, {withCredentials: true})
-    .then(response => {
-      console.log(response)
-      this.setState({
-        asanas: response.data,
-        ready: true,
-      })
-    })
-  }
 
 
   getCurrentlyLoggedInUser = () =>{
@@ -81,7 +68,6 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    this.getAllAsanas();
     this.getCurrentlyLoggedInUser();
   }
 
@@ -117,16 +103,6 @@ class App extends React.Component {
         }
 
         <Switch>
-          {/* just to test:  */}
-
-          <Route exact path="/asanas" render ={(props)=>
-            <Asana
-              {...props} 
-              theUser = {this.state.currentlyLoggedIn} 
-              getData = {this.state.asanas}
-              ready = {this.state.ready}
-            />}
-          />
 
           <Route exact path="/profile" render ={(props)=> 
             this.state.currentlyLoggedIn ? 
@@ -138,17 +114,6 @@ class App extends React.Component {
           :
           <Redirect to="/" />}
           />
-
-          {/* <Route exact path="/asanas/:theID" render ={(props)=>
-            <ProjectDetails
-              {...props} 
-              ready = {this.state.ready}
-              getData = {this.state.asanas}
-              theUser = {this.state.currentlyLoggedIn}
-            />}
-          /> */}
-
-          {/* end test -------------------------------- */}
 
           <Route exact path="/aboutus" component={AboutUs}/>
           <Route exact path="/" component={Main}/>
