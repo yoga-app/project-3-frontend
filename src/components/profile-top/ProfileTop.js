@@ -141,7 +141,7 @@ class ProfileTop extends Component {
       </div>
       <div className="edit-button-wrapper">
       <form onSubmit={this.toggleEditForm}>
-      <Button text="SAVE CHANGES" class="edit-profile-button"/>
+      <Button text="SAVE CHANGES" class="login-signup small-button"/>
       </form>
     </div>
     </section>
