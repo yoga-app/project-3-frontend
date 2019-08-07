@@ -101,14 +101,17 @@ class ProfileTop extends Component {
          
      
     </div>
-    <div className="user-info-wrapper">
+    <div className="user-info-wrapper profile-info">
       <h4 className="inline">{this.props.currentUser.firstName} </h4> 
       <h4 className="inline">{this.props.currentUser.lastName}</h4>
-      <h4>Email: {this.props.currentUser.username}</h4>
+      <p>{this.props.currentUser.username}</p>
     </div>
     <div className="edit-button-wrapper">
     <form onSubmit={this.toggleEditForm}>
-    <Button text="EDIT PROFILE" class="edit-profile-button"/>
+    <Button text="EDIT PROFILE" class="login-signup small-button"/>
+    </form>
+    <form onSubmit={this.deleteProfile}>
+      <Button text="DELETE PROFILE" class="login-signup small-button"/>
     </form>
   </div>
   </section>
@@ -168,9 +171,6 @@ class ProfileTop extends Component {
        
       {this.state.isEditing ? this.showEditFields() : this.showInfo()}
       <div className="delete-button-wrapper">
-      <form onSubmit={this.deleteProfile}>
-      <Button text="Delete Profile" class="delete edit-profile-button"/>
-      </form>
     </div>
       </div>
     );

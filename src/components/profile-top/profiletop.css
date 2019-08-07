@@ -46,3 +46,13 @@
 .wrapper {
   padding-top: 100px;
 }
+
+.profile-info h4 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+
+.profile-info p {
+  font-size: 1.5rem;
+}

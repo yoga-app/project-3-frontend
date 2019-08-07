@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GalleryItem from '../gallery-item/GalleryItem';
+import './private-gallery.css';
 
 class PrivateGallery extends Component {
 
@@ -32,9 +33,10 @@ class PrivateGallery extends Component {
 
   render() {
     return (
-      <div className="temporary">
-        <small>[this is the <b>private gallery component</b>]</small>
-        {this.showGalItems()}
+      <div className="gallery-flex gallery">
+        <div>
+          {this.showGalItems()}
+        </div>
       </div>
     );
   }
