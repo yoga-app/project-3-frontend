@@ -17,8 +17,9 @@
 
 .classes h4 {
   margin: 10px;
+  margin-bottom: 80px;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 2.7rem;
 }
 
 .classes {
@@ -41,5 +42,27 @@
 }
 
 .schedule ul {
-  width: 400px;
+  width: 420px;
+}
+
+.rates ul {
+  width: 300px;
+}
+
+.do-undo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  top: 210px;
+}
+
+.do-undo button {
+  margin-left: 15px;
+}
+
+.each-class {
+  font-weight: 400;
 }
